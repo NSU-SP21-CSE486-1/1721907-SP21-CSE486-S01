@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Mar 17 01:48:03 BDT 2021
+0.baseType=DIRECTORY
+0.base=/home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/build/intermediates/transforms/dexMerger/debug/0
+0.path=classes.dex
+0.set=DEX
+count=1

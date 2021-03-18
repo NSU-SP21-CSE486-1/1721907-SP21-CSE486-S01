@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "/home/ahnaf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/476bcc5650a421eb75e6c8cd1d89953b/res/values-v22/values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,553",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,548,896"
+                    }
+                }
+            ]
+        }
+    ]
+}

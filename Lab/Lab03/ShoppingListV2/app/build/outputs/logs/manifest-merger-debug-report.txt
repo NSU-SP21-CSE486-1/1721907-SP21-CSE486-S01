@@ -1,0 +1,115 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/476bcc5650a421eb75e6c8cd1d89953b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e15fb7ea185f888a33d347839549be14/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/93f0a6e63fea00b90c8d0afcce2bcf6b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6015d99fe3406c7ca4e7238e96e0a2ec/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/edc3653cc1a84aaa4f05b092092c2c39/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/bb7e4794ab435428279f14293b320c21/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1b07720c376ec48a83128b800558702f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b56472f0f63b01a7ea73785efb15240d/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/6ceb1dc094ef80dc0c06d4b1966f8c2f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/69acbdb8b20bb0b28a7e41ee0c1d99b7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593a7e98ac0fbbae7875c1ad70495b9c/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a1595fc0338abc7f778dc405c9092bb7/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e15fb7ea185f888a33d347839549be14/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e15fb7ea185f888a33d347839549be14/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:11:9-40
+activity#me.mahakagg.shoppingListV2.MainActivity
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:12:19-73
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:16:27-74
+activity#me.mahakagg.shoppingListV2.SecondActivity
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:19:9-23:20
+	android:parentActivityName
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:20:13-81
+	android:name
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:19:19-75
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:21:13-22:74
+	android:value
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:22:17-72
+	android:name
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml:21:24-70
+uses-sdk
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/476bcc5650a421eb75e6c8cd1d89953b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/476bcc5650a421eb75e6c8cd1d89953b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e15fb7ea185f888a33d347839549be14/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/e15fb7ea185f888a33d347839549be14/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/93f0a6e63fea00b90c8d0afcce2bcf6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/93f0a6e63fea00b90c8d0afcce2bcf6b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6015d99fe3406c7ca4e7238e96e0a2ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/6015d99fe3406c7ca4e7238e96e0a2ec/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/edc3653cc1a84aaa4f05b092092c2c39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/edc3653cc1a84aaa4f05b092092c2c39/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/bb7e4794ab435428279f14293b320c21/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/bb7e4794ab435428279f14293b320c21/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1b07720c376ec48a83128b800558702f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/1b07720c376ec48a83128b800558702f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b56472f0f63b01a7ea73785efb15240d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/b56472f0f63b01a7ea73785efb15240d/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/6ceb1dc094ef80dc0c06d4b1966f8c2f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/6ceb1dc094ef80dc0c06d4b1966f8c2f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/69acbdb8b20bb0b28a7e41ee0c1d99b7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/69acbdb8b20bb0b28a7e41ee0c1d99b7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593a7e98ac0fbbae7875c1ad70495b9c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/593a7e98ac0fbbae7875c1ad70495b9c/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a1595fc0338abc7f778dc405c9092bb7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /home/ahnaf/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/a1595fc0338abc7f778dc405c9092bb7/AndroidManifest.xml:20:5-44
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		ADDED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
+		INJECTED from /home/ahnaf/cse-486 (last semester)/Android-Developer-Fundamentals-Version-2-master/2.3_Implicit_intents/ShoppingListV2/app/src/main/AndroidManifest.xml
