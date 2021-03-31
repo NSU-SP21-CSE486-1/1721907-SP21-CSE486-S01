@@ -1,1 +1,1 @@
-#Sample Readme.md to create folder structure
+Completed NSU CPC App for student & Admin Prototype in Figma
