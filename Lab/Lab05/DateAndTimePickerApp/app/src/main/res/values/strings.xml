@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DateAndTimePickerApp</string>
+    <string name="Date_Time">Please Pick a Date And Time</string>
+    <string name="Date_Text">Date</string>
+    <string name="Time_Text">Time</string>
+    <string name="Date">Your Setting Date is </string>
+    <string name="Time">Your Setting Time is </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
