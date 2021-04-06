@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Mid Assignment</string>
+    <string name="personal">Welcome Brilliant</string>
+    <string name="name">Your Name (According to NSU ID)</string>
+    <string name="id">Your Student ID</string>
+    <string name="department">Your Department</string>
+    <string name="birth">Your Date of Birth</string>
+    <string name="phone">Your Phone Number</string>
+    <string name="nid">Your NID</string>
+    <string name="school">Select Your School</string>
+    <string name="textview">TextView</string>
+</resources>
