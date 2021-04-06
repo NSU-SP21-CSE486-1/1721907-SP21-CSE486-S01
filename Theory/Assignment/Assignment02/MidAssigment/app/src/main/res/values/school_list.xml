@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="school_list">
+
+        <item>Select Your School</item>
+        <item>Motijheel Ideal School And College</item>
+        <item>Viqarunnisa School And College</item>
+        <item>Motijheel Model School And College</item>
+        <item>National Ideal School And College</item>
+
+    </string-array>
+
+
+</resources>
