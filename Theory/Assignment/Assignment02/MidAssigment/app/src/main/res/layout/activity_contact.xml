@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactActivity">
+
+
+    <EditText
+        android:id="@+id/contact_Id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/presentAddress_Id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/location"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/present_address"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/contact_Id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/contact_Id"
+        app:layout_constraintTop_toBottomOf="@+id/contact_Id" />
+
+    <EditText
+        android:id="@+id/parmanentAddress_Id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/location"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/parmanent_address"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/presentAddress_Id"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/presentAddress_Id"
+        app:layout_constraintTop_toBottomOf="@+id/presentAddress_Id" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Contact Details"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/button_box"
+        android:backgroundTint="@color/green"
+        android:text="Save"
+        android:textColor="@color/light_white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/parmanentAddress_Id"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="@+id/parmanentAddress_Id"
+        app:layout_constraintTop_toBottomOf="@+id/parmanentAddress_Id" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
