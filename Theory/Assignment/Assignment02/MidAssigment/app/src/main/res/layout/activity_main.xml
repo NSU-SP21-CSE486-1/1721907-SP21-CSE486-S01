@@ -4,15 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
   <TextView
-      android:id="@+id/textView"
+      android:id="@+id/welcome"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
+      android:layout_marginTop="40dp"
       android:text="@string/personal"
       android:textSize="20sp"
       android:textStyle="bold"
@@ -22,137 +21,140 @@
       app:layout_constraintTop_toTopOf="parent" />
 
   <EditText
-      android:id="@+id/editTextTextPersonName"
+      android:id="@+id/full_name"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
+      android:layout_marginTop="52dp"
       android:background="@drawable/input_box"
       android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/name"
+      android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/name"
       android:inputType="textPersonName"
       android:textColorHint="@color/gray"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.504"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textView" />
+      app:layout_constraintEnd_toEndOf="@+id/fill_up_form"
+      app:layout_constraintHorizontal_bias="0.51"
+      app:layout_constraintStart_toStartOf="@+id/fill_up_form"
+      app:layout_constraintTop_toBottomOf="@+id/fill_up_form" />
 
   <EditText
-      android:id="@+id/editTextTextPersonName2"
+      android:id="@+id/student_Id"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
+      android:layout_marginTop="20dp"
       android:background="@drawable/input_box"
       android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/id"
+      android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/id"
       android:inputType="textPersonName"
       android:textColorHint="@color/gray"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+      app:layout_constraintEnd_toEndOf="@+id/full_name"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/full_name"
+      app:layout_constraintTop_toBottomOf="@+id/full_name" />
 
   <EditText
-      android:id="@+id/editTextTextPersonName4"
+      android:id="@+id/contact_Id"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
+      android:layout_marginTop="20dp"
       android:background="@drawable/input_box"
       android:backgroundTint="@color/light_white"
-      android:ems="10"
-      android:hint="@string/department"
-      android:inputType="textPersonName"
-      android:textColorHint="@color/gray"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.504"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/TextInputLayout" />
-
-  <EditText
-      android:id="@+id/editTextTextPersonName5"
-      android:layout_width="300dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:background="@drawable/input_box"
-      android:backgroundTint="@color/light_white"
-      android:ems="10"
-      android:hint="@string/birth"
-      android:inputType="textPersonName"
-      android:textColorHint="@color/gray"
-      app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName4"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
-
-  <EditText
-      android:id="@+id/editTextTextPersonName6"
-      android:layout_width="300dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:background="@drawable/input_box"
-      android:backgroundTint="@color/light_white"
-      android:ems="10"
-      android:hint="@string/phone"
-      android:inputType="textPersonName"
-      android:textColorHint="@color/gray"
-      app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName5"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName5"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
-
-  <EditText
-      android:id="@+id/editTextTextPersonName7"
-      android:layout_width="300dp"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      android:background="@drawable/input_box"
-      android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/id"
+      android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/nid"
       android:inputType="textPersonName"
       android:textColorHint="@color/gray"
-      app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName6"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName6"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
   <Button
-      android:id="@+id/button"
+      android:id="@+id/next_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="32dp"
+      android:layout_marginTop="48dp"
       android:background="@drawable/button_box"
       android:backgroundTint="@color/green"
       android:text="Next"
+      android:textColor="@color/light_white"
       android:textSize="30sp"
       android:textStyle="bold"
       app:backgroundTint="@color/green"
-      app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName7"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName7"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+      app:layout_constraintEnd_toEndOf="@+id/contact_Id"
+      app:layout_constraintHorizontal_bias="0.51"
+      app:layout_constraintStart_toStartOf="@+id/contact_Id"
+      app:layout_constraintTop_toBottomOf="@+id/contact_Id" />
+
+  <!--        School List Drop Down-->
 
   <com.google.android.material.textfield.TextInputLayout
-      app:startIconDrawable="@drawable/school"
-      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
       android:id="@+id/TextInputLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
-      android:layout_marginTop="28dp"
-      app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-      app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toEndOf="@+id/student_Id"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/student_Id"
+      app:layout_constraintTop_toBottomOf="@+id/student_Id"
+      app:startIconDrawable="@drawable/school">
 
     <AutoCompleteTextView
         android:id="@+id/School_list_Id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:backgroundTint="@color/light_white"
         android:inputType="none"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:popupBackground="@drawable/input_box"
-        android:text="@string/school" />
+        android:text="@string/school"
+        android:textColor="@color/gray" />
   </com.google.android.material.textfield.TextInputLayout>
+
+
+  <!--        Department List Drop Down-->
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout2"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toEndOf="@+id/TextInputLayout"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/TextInputLayout"
+      app:layout_constraintTop_toBottomOf="@+id/TextInputLayout"
+      app:startIconDrawable="@drawable/school">
+
+    <AutoCompleteTextView
+        android:id="@+id/dept_List_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/light_white"
+        android:inputType="none"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/Department"
+        android:textColor="@color/gray" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <TextView
+      android:id="@+id/fill_up_form"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/fill_this_form"
+      app:layout_constraintEnd_toEndOf="@+id/welcome"
+      app:layout_constraintStart_toStartOf="@+id/welcome"
+      app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

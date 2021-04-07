@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="school">Select Your School</string>
+    <string name="department">deparment</string>
+    <string name="fill_this_form">Please FIll Up This Form Quickly</string>
+    <string name="phone">Your Phone Number</string>
+    <string name="present_address">Present Address</string>
+    <string name="Department">Select Your Department</string>
+    <string name="parmanent_address">Parmanent Address</string>
+    <string name="select_date">date</string>
 </resources>
