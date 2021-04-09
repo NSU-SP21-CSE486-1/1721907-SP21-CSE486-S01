@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity  {
 
     private AutoCompleteTextView schoolList;
     private AutoCompleteTextView deptList;
-
+    private Button nextButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
 
-
+        nextButton = findViewById(R.id.next_button);
         schoolList = findViewById(R.id.School_list_Id);
         deptList = findViewById(R.id.dept_List_Id);
 
@@ -66,4 +66,10 @@ public class MainActivity extends AppCompatActivity  {
 
     }
 
+    public void next(View view) {
+
+        Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+        startActivity(intent);
+
+    }
 }
