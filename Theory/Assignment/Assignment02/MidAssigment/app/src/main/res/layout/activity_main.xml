@@ -49,7 +49,7 @@
       android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/id"
-      android:inputType="textPersonName"
+      android:inputType="number"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="@+id/full_name"
       app:layout_constraintHorizontal_bias="1.0"
@@ -71,7 +71,7 @@
       app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
   <EditText
-      android:id="@+id/contact_Id"
+      android:id="@+id/phone_Id"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
@@ -81,7 +81,7 @@
       android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/nid"
-      android:inputType="textPersonName"
+     android:inputType="number"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -100,10 +100,10 @@
       android:textSize="30sp"
       android:textStyle="bold"
       app:backgroundTint="@color/green"
-      app:layout_constraintEnd_toEndOf="@+id/contact_Id"
+      app:layout_constraintEnd_toEndOf="@+id/phone_Id"
       app:layout_constraintHorizontal_bias="0.51"
-      app:layout_constraintStart_toStartOf="@+id/contact_Id"
-      app:layout_constraintTop_toBottomOf="@+id/contact_Id" />
+      app:layout_constraintStart_toStartOf="@+id/phone_Id"
+      app:layout_constraintTop_toBottomOf="@+id/phone_Id" />
 
   <!--        School List Drop Down-->
 
