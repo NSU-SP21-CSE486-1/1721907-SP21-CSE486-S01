@@ -4,11 +4,11 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 
 @Dao
-public interface DAO<contact, student> {
+public interface DAO {
 
     @Insert
-    public void studentInsertion (student);
-    @Insert
-    public void contactInsertion (contact);
+    public void studentInsertion(Student student);
+
+
 
 }

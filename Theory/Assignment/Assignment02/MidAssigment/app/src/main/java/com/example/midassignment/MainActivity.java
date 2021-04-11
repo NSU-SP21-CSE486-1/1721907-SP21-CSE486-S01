@@ -26,9 +26,15 @@ public class MainActivity extends AppCompatActivity  {
     private AutoCompleteTextView schoolList;
     private AutoCompleteTextView deptList;
     private Button nextButton;
-    private EditText fullName, studentId,nid;
+    private EditText fullName, studentId, nid, date;
 
 
+    public static final String first_name = "com.example.midassignment.first_name";
+    public static final String first_studentId = "com.example.midassignment.first_studentId";
+    public static final String first_schoolList = "com.example.midassignment.first_schoolList";
+    public static final String first_deptList = "com.example.midassignment.first_deptList";
+    public static final String first_date = "com.example.midassignment.first_date";
+    public static final String first_nid = "com.example.midassignment.first_nid";
 
 
     @Override
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity  {
         fullName = findViewById(R.id.full_name);
         studentId = findViewById(R.id.student_Id);
         nid = findViewById(R.id.nid_Id);
+        date = findViewById(R.id.datePickerEditText);
 
 
 
@@ -92,22 +99,31 @@ public class MainActivity extends AppCompatActivity  {
 
 
     public void next(View view) {
-//Database Starts
 
-//Database Insertion
-        Student student = new Student(fullName.getText().toString(),studentId.getText().toString(),nid.getText().toString());
-        MyDatabase myDatabase = Room.databaseBuilder(MainActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+//Pass the Intents Starts
 
-        myDatabase.dao().studentInsertion(student);
+        String pass_name = fullName.getText().toString();
+        String pass_studentId = studentId.getText().toString();
+        String pass_schoollist = schoolList.getText().toString();
+        String pass_deptList = deptList.getText().toString();
+        String pass_date = date.getText().toString();
+        String pass_nid = nid.getText().toString();
 
-//Database Ends
-
-//    intent starts
 
         Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+
+        intent.putExtra(first_name, pass_name);
+        intent.putExtra(first_studentId, pass_studentId);
+        intent.putExtra(first_schoolList, pass_schoollist);
+        intent.putExtra(first_deptList, pass_deptList);
+        intent.putExtra(first_date, pass_date);
+        intent.putExtra(first_nid, pass_nid);
+
         startActivity(intent);
 
+//Pass the Intents Ends
+
     }
-//    intent Ends
+
 
 }

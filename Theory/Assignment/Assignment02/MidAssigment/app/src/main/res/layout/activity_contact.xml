@@ -39,7 +39,6 @@
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:onClick="save"
                 android:hint="@string/phone"
                 android:inputType="phone"
                 android:textColorHint="@color/gray" />
