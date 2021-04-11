@@ -2,6 +2,7 @@ package com.example.midassignment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.midassignment.Room.MyDatabase;
+import com.example.midassignment.Room.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +26,10 @@ public class MainActivity extends AppCompatActivity  {
     private AutoCompleteTextView schoolList;
     private AutoCompleteTextView deptList;
     private Button nextButton;
+    private EditText fullName, studentId,nid;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +41,13 @@ public class MainActivity extends AppCompatActivity  {
         nextButton = findViewById(R.id.next_button);
         schoolList = findViewById(R.id.School_list_Id);
         deptList = findViewById(R.id.dept_List_Id);
+        fullName = findViewById(R.id.full_name);
+        studentId = findViewById(R.id.student_Id);
+        nid = findViewById(R.id.nid_Id);
+
+
+
+//        DropDown list start
 
         String[] schoolListString = getResources().getStringArray(R.array.school_list);
         String[] eceListString = getResources().getStringArray(R.array.ece_dept_list);
@@ -70,13 +86,28 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+//        Drop Down List Ends
+
     }
 
 
     public void next(View view) {
+//Database Starts
+
+//Database Insertion
+        Student student = new Student(fullName.getText().toString(),studentId.getText().toString(),nid.getText().toString());
+        MyDatabase myDatabase = Room.databaseBuilder(MainActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+
+        myDatabase.dao().studentInsertion(student);
+
+//Database Ends
+
+//    intent starts
 
         Intent intent = new Intent(MainActivity.this, ContactActivity.class);
         startActivity(intent);
 
     }
+//    intent Ends
+
 }

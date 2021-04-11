@@ -32,6 +32,7 @@
       android:ems="10"
       android:hint="@string/name"
       android:inputType="textPersonName"
+      android:onClick="next"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="@+id/fill_up_form"
       app:layout_constraintHorizontal_bias="0.51"
@@ -50,6 +51,7 @@
       android:ems="10"
       android:hint="@string/id"
       android:inputType="number"
+      android:onClick="next"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="@+id/full_name"
       app:layout_constraintHorizontal_bias="1.0"
@@ -62,16 +64,16 @@
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
       android:background="@drawable/input_box"
+      android:backgroundTint="@color/light_white"
       android:drawableStart="@drawable/date"
       android:drawablePadding="10dp"
-      android:backgroundTint="@color/light_white"
       android:hint="@string/select_date"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
   <EditText
-      android:id="@+id/phone_Id"
+      android:id="@+id/nid_Id"
       android:layout_width="300dp"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
@@ -81,17 +83,20 @@
       android:drawablePadding="10dp"
       android:ems="10"
       android:hint="@string/nid"
-     android:inputType="number"
+      android:inputType="number"
+      android:onClick="next"
       android:textColorHint="@color/gray"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/datePickerEditText" />
 
+  <!--        School List Drop Down-->
+
   <Button
       android:id="@+id/next_button"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="48dp"
+      android:layout_marginTop="40dp"
       android:background="@drawable/button_box"
       android:backgroundTint="@color/green"
       android:onClick="next"
@@ -100,12 +105,9 @@
       android:textSize="30sp"
       android:textStyle="bold"
       app:backgroundTint="@color/green"
-      app:layout_constraintEnd_toEndOf="@+id/phone_Id"
-      app:layout_constraintHorizontal_bias="0.51"
-      app:layout_constraintStart_toStartOf="@+id/phone_Id"
-      app:layout_constraintTop_toBottomOf="@+id/phone_Id" />
-
-  <!--        School List Drop Down-->
+      app:layout_constraintEnd_toEndOf="@+id/nid_Id"
+      app:layout_constraintStart_toStartOf="@+id/nid_Id"
+      app:layout_constraintTop_toBottomOf="@+id/nid_Id" />
 
   <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/TextInputLayout"
