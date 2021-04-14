@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <EditText
+        android:id="@+id/firstNameId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Fisrst Name"/>
+
+
+    <EditText
+        android:id="@+id/lastNameId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/classId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Class"
+        android:inputType="number"/>
+
+
+    <Button
+        android:id="@+id/addButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>
