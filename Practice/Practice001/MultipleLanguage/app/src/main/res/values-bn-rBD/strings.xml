@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">একাধিক ভাষা সমর্থন</string>
+    <string name="welcome">স্বাগতম</string>
+    <string name="email">ইমেইল</string>
+    <string name="password">পাসওয়ার্ড</string>
+    <string name="login">প্রবেশ করুন</string>
+    <string name="account">ইতিমধ্যে একটি একাউন্ট আছে?</string>
+    <string name="change_language">ভাষা পরিবর্তন করুন</string>
+</resources>
