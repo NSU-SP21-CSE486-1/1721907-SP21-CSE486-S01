@@ -8,6 +8,7 @@ import androidx.room.Room;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.widget.Adapter;
 import android.widget.EditText;
 
 import com.example.roomdatabase.MainActivity;
@@ -20,8 +21,10 @@ import java.util.List;
 public class DisplayActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdappter;
+    DisplayAdapter dAdapter;
     private RecyclerView.LayoutManager mLayout;
+    EditText searchView;
+    CharSequence search = "";
 
 
 
@@ -35,16 +38,34 @@ public class DisplayActivity extends AppCompatActivity {
         mLayout = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayout);
 
+        searchView = findViewById(R.id.searchId);
 
         MyDatabase myDatabase = Room.databaseBuilder(DisplayActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
 
 
         List<Student> sfirstName = myDatabase.dao().getStudent();
-        mAdappter = new DisplayAdapter(sfirstName,this);
-        recyclerView.setAdapter(mAdappter);
+        dAdapter = new DisplayAdapter(sfirstName,this);
+        recyclerView.setAdapter(dAdapter);
 
 
+        searchView.addTextChangedListener((new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
 
+            @Override
+            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
+
+                dAdapter.getFilter().filter(charSequence);
+                search = charSequence;
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        }));
     }
 }

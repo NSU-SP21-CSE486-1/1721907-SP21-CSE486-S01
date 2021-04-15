@@ -21,11 +21,13 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayH
 
     List<Student> displays;
     Context context;
-    
+
+    List<Student> searchData;
 
     public DisplayAdapter(List<Student> displays, Context context) {
         this.displays = displays;
         this.context = context;
+        this.searchData = displays;
     }
 
     @NonNull
@@ -37,12 +39,12 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayH
 
     @Override
     public void onBindViewHolder(@NonNull DisplayHolder holder, int position) {
-        holder.firstName.setText(displays.get(position).getSfirstName());
+        holder.firstName.setText(searchData.get(position).getSfirstName());
     }
 
     @Override
     public int getItemCount() {
-        return displays.size();
+        return searchData.size();
     }
 
 
@@ -56,6 +58,36 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayH
             firstName = itemView.findViewById(R.id.firstNameId);
         }
     }
+    public Filter getFilter(){
 
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence  charSequence ) {
+               String key = charSequence.toString();
+               if(key.isEmpty()){
+                   searchData = displays;
+               }
+               else{
+                   List<Student> searchbar = new ArrayList<>();
+                   for(Student row: displays){
+                       if (row.getSfirstName().toLowerCase().contains(key.toLowerCase())){
+                           searchbar.add(row);
+                       }
+                   }
+                   searchData = searchbar;
+            }
+               FilterResults searchResult = new FilterResults();
+               searchResult.values = searchData;
+               return searchResult;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults searchResults) {
+
+                searchData = (List<Student>) searchResults.values;
+                notifyDataSetChanged();
+
+            }
+        };
+    }
 }
-
