@@ -10,17 +10,17 @@ import java.util.List;
 @Entity
 public class Student {
 
-    @PrimaryKey (autoGenerate = true)
+    @PrimaryKey(autoGenerate = true)
     int serialId;
     String fullName;
-    String studentId;
+    int studentId;
     String school;
     String dept;
     String date;
-    String nid;
-    String phoneNumber;
+    int nid;
+    int phoneNumber;
 
-    public Student(String fullName, String studentId, String school, String dept, String date, String nid, String phoneNumber) {
+    public Student(String fullName, int studentId, String school, String dept, String date, int nid, int phoneNumber) {
         this.fullName = fullName;
         this.studentId = studentId;
         this.school = school;
@@ -29,8 +29,6 @@ public class Student {
         this.nid = nid;
         this.phoneNumber = phoneNumber;
     }
-
-
 
     @Override
     public String toString() {
@@ -41,8 +39,8 @@ public class Student {
                 ", school='" + school + '\'' +
                 ", dept='" + dept + '\'' +
                 ", date='" + date + '\'' +
-                ", nid='" + nid + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
+                ", nid=" + nid +
+                ", phoneNumber=" + phoneNumber +
                 '}';
     }
 
@@ -62,11 +60,11 @@ public class Student {
         this.fullName = fullName;
     }
 
-    public String getStudentId() {
+    public int getStudentId() {
         return studentId;
     }
 
-    public void setStudentId(String studentId) {
+    public void setStudentId(int studentId) {
         this.studentId = studentId;
     }
 
@@ -94,20 +92,19 @@ public class Student {
         this.date = date;
     }
 
-    public String getNid() {
+    public int getNid() {
         return nid;
     }
 
-    public void setNid(String nid) {
+    public void setNid(int nid) {
         this.nid = nid;
     }
 
-    public String getPhoneNumber() {
+    public int getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
-
 }

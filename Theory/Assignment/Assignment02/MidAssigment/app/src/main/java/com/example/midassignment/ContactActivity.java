@@ -10,9 +10,11 @@ import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.midassignment.Room.MyDatabase;
 import com.example.midassignment.Room.Student;
+import com.example.midassignment.viewmodel.DisplayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +56,7 @@ public class ContactActivity extends AppCompatActivity {
         nid = intent.getStringExtra(MainActivity.first_nid);
 
 
+
     }
 
     private void setRecyclerView() {
@@ -67,19 +70,39 @@ public class ContactActivity extends AppCompatActivity {
 
         versionsList = new ArrayList<>();
 
-        versionsList.add(new versions("Present Address", "", "", "", "", "", "", ""));
-        versionsList.add(new versions("Parmanent Address", "", "", "", "", "", "", ""));
+        versionsList.add(new versions(getString(R.string.present_address), "", "", "", "", "", "", ""));
+        versionsList.add(new versions(getString(R.string.permanent_address), "", "", "", "", "", "", ""));
     }
 
 
     public void save(View view) {
 
-        Student student;
+        boolean allow = true;
+        String pass_phoneNumber = phoneNumber.getText().toString();
 
-        student = new Student(fullName, studentId, schoolList, deptList, date, nid, phoneNumber.getText().toString());
-        MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+        if(phoneNumber.length() != 11){
+            phoneNumber.setError(getString(R.string.phone_number_validation));
+            allow = false;
+        }
 
-        myDatabase.dao().studentInsertion(student);
+        if (allow){
+            Student student;
+
+            try {
+                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, Integer.parseInt(nid), Integer.parseInt(phoneNumber.getText().toString()));
+                MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+
+                myDatabase.dao().studentInsertion(student);
+
+                Intent intent = new Intent(ContactActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+            catch (Exception e){
+                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
 
     }
 }

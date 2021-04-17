@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".MainActivity">
 
 
@@ -12,7 +13,7 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="40dp"
-      android:text="@string/personal"
+      android:text="@string/welcome"
       android:textSize="20sp"
       android:textStyle="bold"
       app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +66,7 @@
       android:backgroundTint="@color/light_white"
       android:drawableStart="@drawable/date"
       android:drawablePadding="10dp"
-      android:hint="@string/select_date"
+      android:hint="@string/birth"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
@@ -97,7 +98,7 @@
       android:background="@drawable/button_box"
       android:backgroundTint="@color/green"
       android:onClick="next"
-      android:text="Next"
+      android:text="@string/next_button"
       android:textColor="@color/light_white"
       android:textSize="30sp"
       android:textStyle="bold"
@@ -169,6 +170,32 @@
       app:layout_constraintEnd_toEndOf="@+id/welcome"
       app:layout_constraintStart_toStartOf="@+id/welcome"
       app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+  <Button
+      android:id="@+id/viewButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:onClick="view"
+      android:text="@string/view_button"
+      app:backgroundTint="@color/green"
+      app:layout_constraintEnd_toEndOf="@+id/next_button"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="@+id/next_button"
+      app:layout_constraintTop_toBottomOf="@+id/next_button" />
+
+  <ImageButton
+      android:id="@+id/languageId"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="44dp"
+      android:layout_marginTop="32dp"
+      android:onClick="change"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.235"
+      app:layout_constraintStart_toEndOf="@+id/welcome"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:srcCompat="@drawable/bangla_translate" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

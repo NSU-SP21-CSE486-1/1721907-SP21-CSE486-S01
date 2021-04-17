@@ -25,7 +25,6 @@
             android:backgroundTint="@color/light_white"
             android:drawablePadding="10dp"
             android:padding="10dp"
-            android:text="Present Address"
             android:textSize="20sp" />
 
 
@@ -43,7 +42,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/input_box"
-                android:hint="Country"
+                android:hint="@string/country"
                 android:padding="10dp"
                 />
 
@@ -55,7 +54,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="99dp"
                 android:background="@drawable/input_box"
-                android:hint="District"
+                android:hint="@string/district"
                 android:padding="10dp"
                 />
 
@@ -67,7 +66,7 @@
                 android:layout_marginStart="1dp"
                 android:layout_marginTop="17dp"
                 android:background="@drawable/input_box"
-                android:hint="Post Office"
+                android:hint="@string/post_office"
                 android:padding="10dp" />
 
             <EditText
@@ -77,7 +76,7 @@
                 android:layout_below="@id/policeStation_Id"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/input_box"
-                android:hint="Postal Code"
+                android:hint="@string/postal_code"
                 android:padding="10dp"
                 android:inputType="number"
                 />
@@ -90,7 +89,7 @@
                 android:layout_below="@id/postOffice_Id"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/input_box"
-              android:hint="Police Station"
+              android:hint="@string/police_station"
                 android:padding="10dp"
              />
 
@@ -102,7 +101,7 @@
                 android:layout_below="@id/postalCode_Id"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/input_box"
-                android:hint="House/Village/City"
+                android:hint="@string/house"
                 android:padding="10dp"
                 />
 
@@ -113,7 +112,7 @@
                 android:layout_below="@id/house_Id"
                 android:layout_marginTop="18dp"
                 android:background="@drawable/input_box"
-                android:hint="Road/Block/Sector"
+                android:hint="@string/road"
                 android:padding="10dp"
                  />
 

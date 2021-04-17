@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="90dp"
                 android:layout_marginTop="44dp"
-                android:text="Contact Details"
+                android:text="@string/contact"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -60,7 +60,7 @@
                 android:layout_marginTop="80dp"
                 android:background="@drawable/button_box"
                 android:backgroundTint="@color/green"
-                android:text="Save"
+                android:text="@string/save_button"
                 android:onClick="save"
                 android:textColor="@color/light_white"
                 android:textSize="30sp"

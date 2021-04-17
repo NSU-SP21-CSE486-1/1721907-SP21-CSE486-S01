@@ -1,10 +1,16 @@
 package com.example.midassignment;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,13 +18,16 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.midassignment.Room.MyDatabase;
 import com.example.midassignment.Room.Student;
+import com.example.midassignment.viewmodel.DisplayActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -43,7 +52,6 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
 
 
-
         nextButton = findViewById(R.id.next_button);
         schoolList = findViewById(R.id.School_list_Id);
         deptList = findViewById(R.id.dept_List_Id);
@@ -51,8 +59,6 @@ public class MainActivity extends AppCompatActivity  {
         studentId = findViewById(R.id.student_Id);
         nid = findViewById(R.id.nid_Id);
         date = findViewById(R.id.datePickerEditText);
-
-
 
 //        DropDown list start
 
@@ -101,7 +107,7 @@ public class MainActivity extends AppCompatActivity  {
     public void next(View view) {
 
 //Pass the Intents Starts
-
+        boolean allow = true;
         String pass_name = fullName.getText().toString();
         String pass_studentId = studentId.getText().toString();
         String pass_schoollist = schoolList.getText().toString();
@@ -109,21 +115,35 @@ public class MainActivity extends AppCompatActivity  {
         String pass_date = date.getText().toString();
         String pass_nid = nid.getText().toString();
 
+        if(studentId.length() !=7){
+            studentId.setError(getString(R.string.student_Id_Validation));
+            allow = false;
+        }
+        if(nid.length() != 10){
+            nid.setError(getString(R.string.nid_validation));
+            allow = false;
+        }
 
-        Intent intent = new Intent(MainActivity.this, ContactActivity.class);
+        if(allow){
+            Intent intent = new Intent(MainActivity.this, ContactActivity.class);
 
-        intent.putExtra(first_name, pass_name);
-        intent.putExtra(first_studentId, pass_studentId);
-        intent.putExtra(first_schoolList, pass_schoollist);
-        intent.putExtra(first_deptList, pass_deptList);
-        intent.putExtra(first_date, pass_date);
-        intent.putExtra(first_nid, pass_nid);
+            intent.putExtra(first_name, pass_name);
+            intent.putExtra(first_studentId, pass_studentId);
+            intent.putExtra(first_schoolList, pass_schoollist);
+            intent.putExtra(first_deptList, pass_deptList);
+            intent.putExtra(first_date, pass_date);
+            intent.putExtra(first_nid, pass_nid);
 
-        startActivity(intent);
+            startActivity(intent);
+        }
 
 //Pass the Intents Ends
 
     }
 
+    public void view(View view) {
 
+        Intent intent = new Intent(this,DisplayActivity.class);
+        startActivity(intent);
+    }
 }
