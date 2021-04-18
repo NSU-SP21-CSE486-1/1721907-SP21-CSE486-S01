@@ -1,10 +1,7 @@
 package com.example.midassignment;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
 
 import android.app.Activity;
 import android.content.DialogInterface;
@@ -19,14 +16,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
-import com.example.midassignment.Room.MyDatabase;
-import com.example.midassignment.Room.Student;
 import com.example.midassignment.viewmodel.DisplayActivity;
+import com.example.midassignment.viewmodel.SearchActivity;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity  {
@@ -36,6 +29,8 @@ public class MainActivity extends AppCompatActivity  {
     private AutoCompleteTextView deptList;
     private Button nextButton;
     private EditText fullName, studentId, nid, date;
+
+    private ImageButton language;
 
 
     public static final String first_name = "com.example.midassignment.first_name";
@@ -50,6 +45,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loadLocale();
 
 
         nextButton = findViewById(R.id.next_button);
@@ -59,6 +55,10 @@ public class MainActivity extends AppCompatActivity  {
         studentId = findViewById(R.id.student_Id);
         nid = findViewById(R.id.nid_Id);
         date = findViewById(R.id.datePickerEditText);
+
+        language = findViewById(R.id.languageId);
+
+
 
 //        DropDown list start
 
@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity  {
     public void next(View view) {
 
 //Pass the Intents Starts
+        boolean allow = true;
         String pass_name = fullName.getText().toString();
         String pass_studentId = studentId.getText().toString();
         String pass_schoollist = schoolList.getText().toString();
@@ -114,7 +115,16 @@ public class MainActivity extends AppCompatActivity  {
         String pass_date = date.getText().toString();
         String pass_nid = nid.getText().toString();
 
+        if(studentId.length() !=7){
+            studentId.setError(getString(R.string.student_Id_Validation));
+            allow = false;
+        }
+        if(nid.length() != 10){
+            nid.setError(getString(R.string.nid_validation));
+            allow = false;
+        }
 
+        if(allow){
             Intent intent = new Intent(MainActivity.this, ContactActivity.class);
 
             intent.putExtra(first_name, pass_name);
@@ -125,7 +135,7 @@ public class MainActivity extends AppCompatActivity  {
             intent.putExtra(first_nid, pass_nid);
 
             startActivity(intent);
-
+        }
 
 //Pass the Intents Ends
 
@@ -133,7 +143,72 @@ public class MainActivity extends AppCompatActivity  {
 
     public void view(View view) {
 
-        Intent intent = new Intent(this,DisplayActivity.class);
+        Intent intent = new Intent(this, DisplayActivity.class);
         startActivity(intent);
     }
+
+    public void search(View view) {
+        Intent intent= new Intent(this,SearchActivity.class);
+        startActivity(intent);
+    }
+
+
+    //Multiple language Support Starts
+
+    public void change(View view) {
+
+        showChangeLanguageDialog();
+
+    }
+
+    private void showChangeLanguageDialog() {
+
+        final String[] listItem = {"English-UK", "English-US", "Bangla-BN"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choose Language...");
+        mBuilder.setSingleChoiceItems(listItem, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                if(i==0){
+                    setLocale("EN-UK");
+                    recreate();
+                }
+                else if(i==1){
+                    setLocale("EN-US");
+                    recreate();
+                }
+                else if(i==2){
+                    setLocale("BN");
+                    recreate();
+                }
+
+                dialogInterface.dismiss();
+
+            }
+        });
+
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+    }
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My Language",language);
+        editor.apply();
+    }
+
+    public void loadLocale(){
+        SharedPreferences preferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String languages = preferences.getString("My Language", "");
+        setLocale(languages);
+    }
+    //Multiple language Support Ends
+
 }

@@ -13,7 +13,7 @@
         android:drawableLeft="@drawable/id"
         android:drawablePadding="10dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
 </androidx.cardview.widget.CardView>

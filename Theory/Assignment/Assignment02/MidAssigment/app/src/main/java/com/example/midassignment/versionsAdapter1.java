@@ -13,11 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class versionsAdapter extends RecyclerView.Adapter<versionsAdapter.VersionVH>{
+public class versionsAdapter1 extends RecyclerView.Adapter<versionsAdapter1.VersionVH>{
 
     List<versions> versionsList;
 
-    public versionsAdapter(List<versions> versionsList) {
+    public versionsAdapter1(List<versions> versionsList) {
         this.versionsList = versionsList;
     }
 

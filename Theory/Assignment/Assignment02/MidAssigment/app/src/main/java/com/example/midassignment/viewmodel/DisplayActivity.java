@@ -6,13 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.Adapter;
-import android.widget.EditText;
 
-import com.example.midassignment.MainActivity;
-import com.example.midassignment.R;
 import com.example.midassignment.R;
 import com.example.midassignment.Room.MyDatabase;
 import com.example.midassignment.Room.Student;
@@ -24,8 +18,6 @@ public class DisplayActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DisplayAdapter dAdapter;
     private RecyclerView.LayoutManager mLayout;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +36,5 @@ public class DisplayActivity extends AppCompatActivity {
         List<Student> studentId = myDatabase.dao().getStudent();
         dAdapter = new DisplayAdapter(studentId,this);
         recyclerView.setAdapter(dAdapter);
-
     }
 }

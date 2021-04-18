@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MidAssignment">
         <activity android:name=".viewmodel.DisplayActivity"></activity>
+        <activity android:name=".viewmodel.SearchActivity" />
         <activity android:name=".ContactActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

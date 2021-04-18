@@ -30,5 +30,7 @@
     <string name="phone_number_validation">You Should Put Your Number Within 11 Digit</string>
     <string name="present_address">Present Address</string>
     <string name="permanent_address">Permanent Address</string>
+    <string name="registerd_student_list">All The Registerd Student</string>
+    <string name="search_sttudent">Please Search Sttudent By Id</string>
 
 </resources>

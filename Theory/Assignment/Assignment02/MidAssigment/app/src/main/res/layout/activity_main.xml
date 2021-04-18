@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".MainActivity">
 
 
@@ -179,6 +179,7 @@
       android:onClick="view"
       android:text="@string/view_button"
       app:backgroundTint="@color/green"
+      android:textColor="@color/light_white"
       app:layout_constraintEnd_toEndOf="@+id/next_button"
       app:layout_constraintHorizontal_bias="0.495"
       app:layout_constraintStart_toStartOf="@+id/next_button"
@@ -186,16 +187,26 @@
 
   <ImageButton
       android:id="@+id/languageId"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
       android:layout_marginStart="44dp"
-      android:layout_marginTop="32dp"
+      android:layout_marginTop="16dp"
       android:onClick="change"
+      android:src="@drawable/bangla_translate"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.235"
+      app:layout_constraintHorizontal_bias="0.281"
       app:layout_constraintStart_toEndOf="@+id/welcome"
-      app:layout_constraintTop_toTopOf="parent"
-      tools:srcCompat="@drawable/bangla_translate" />
+      app:layout_constraintTop_toTopOf="parent" />
 
+  <ImageButton
+      android:id="@+id/imageButton"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="9dp"
+      android:onClick="search"
+      app:layout_constraintEnd_toEndOf="@+id/languageId"
+      app:layout_constraintStart_toStartOf="@+id/languageId"
+      app:layout_constraintTop_toBottomOf="@+id/languageId"
+      android:src ="@drawable/search" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

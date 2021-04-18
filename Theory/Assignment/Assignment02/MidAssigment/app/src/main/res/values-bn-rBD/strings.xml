@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">মিড অ্যাসাইনমেন্ট</string>
+    <string name="welcome">স্বাগতম মেধাবী</string>
+    <string name="fill_this_form">এই ফর্মটি দ্রুত পূরণ করুন</string>
+    <string name="name">আপনার নাম (এনএসইউ আইডি অনুযায়ী)</string>
+    <string name="id">আপনার শিক্ষার্থী আইডি  </string>
+    <string name="birth">আপনার জন্ম তারিখ নির্বাচন করুন</string>
+    <string name="nid">আপনার এনআইডি নং</string>
+    <string name="school">আপনার স্কুল নির্বাচন করুন</string>
+    <string name="Department">আপনার বিভাগ নির্বাচন করুন</string>
+
+    <string name="next_button">পরবর্তীতে যান</string>
+    <string name="view_button">সব দেখুন</string>
+    <string name="save_button">সংরক্ষণ করুন</string>
+
+    <string name="contact">যোগাযোগের ঠিকানা</string>
+    <string name="search">এখানে অনুসন্ধান করুন</string>
+    <string name="phone">আপনার ফোন নম্বর</string>
+    <string name="present_address">বর্তমান ঠিকানা</string>
+    <string name="permanent_address">স্থায়ী ঠিকানা</string>
+    <string name="drop_down">ড্রপ ডাউন</string>
+    <string name="country">দেশ</string>
+    <string name="district">জেলা</string>
+    <string name="post_office">ডাক ঘর</string>
+    <string name="postal_code">পোস্ট অফিসের নাম্বার</string>
+    <string name="police_station">থানা</string>
+    <string name="house">বাড়ি / গ্রাম / শহর</string>
+    <string name="road">রাস্তা / ব্লক / সেক্টর</string>
+
+    <string name="student_Id_Validation">আপনার এনএসইউ আইডির প্রথম 7 ডিজিট রাখুন</string>
+    <string name="nid_validation">আপনার নিজের নতুন ফর্মেটের (১0 ডিজিট) এনআইডি নম্বর দিন</string>
+    <string name="phone_number_validation">আপনার নিজের নাম্বারটি ১১ ডিজিটের মধ্যে রাখুন</string>
+    <string name="registerd_student_list">সকল নিবন্ধিত শিক্ষার্থীর তালিকা</string>
+    <string name="search_sttudent">শিক্ষার্থীর আইডি অনুসন্ধান করুন</string>
+</resources>
