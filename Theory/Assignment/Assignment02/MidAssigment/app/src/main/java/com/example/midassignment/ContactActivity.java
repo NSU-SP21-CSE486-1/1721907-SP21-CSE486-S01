@@ -76,20 +76,11 @@ public class ContactActivity extends AppCompatActivity {
 
 
     public void save(View view) {
-
-        boolean allow = true;
-        String pass_phoneNumber = phoneNumber.getText().toString();
-
-        if(phoneNumber.length() != 11){
-            phoneNumber.setError(getString(R.string.phone_number_validation));
-            allow = false;
-        }
-
-        if (allow){
+        
             Student student;
 
             try {
-                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()));
+                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, Integer.parseInt(nid), Integer.parseInt(phoneNumber.getText().toString()));
                 MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
 
                 myDatabase.dao().studentInsertion(student);
@@ -100,7 +91,6 @@ public class ContactActivity extends AppCompatActivity {
             catch (Exception e){
                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
             }
-        }
 
 
 

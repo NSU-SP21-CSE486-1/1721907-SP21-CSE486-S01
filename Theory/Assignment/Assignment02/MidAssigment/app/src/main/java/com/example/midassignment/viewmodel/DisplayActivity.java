@@ -24,8 +24,6 @@ public class DisplayActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DisplayAdapter dAdapter;
     private RecyclerView.LayoutManager mLayout;
-    EditText searchView;
-    CharSequence search = "";
 
 
 
@@ -39,8 +37,6 @@ public class DisplayActivity extends AppCompatActivity {
         mLayout = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayout);
 
-        searchView = findViewById(R.id.searchId);
-
 
         MyDatabase myDatabase = Room.databaseBuilder(DisplayActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
 
@@ -48,26 +44,6 @@ public class DisplayActivity extends AppCompatActivity {
         List<Student> studentId = myDatabase.dao().getStudent();
         dAdapter = new DisplayAdapter(studentId,this);
         recyclerView.setAdapter(dAdapter);
-
-        searchView.addTextChangedListener((new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-
-                dAdapter.getFilter().filter(charSequence);
-                search = charSequence;
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        }));
 
     }
 }

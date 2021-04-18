@@ -17,10 +17,10 @@ public class Student {
     String school;
     String dept;
     String date;
-    String nid;
+    int nid;
     int phoneNumber;
 
-    public Student(String fullName, int studentId, String school, String dept, String date, String nid, int phoneNumber) {
+    public Student(String fullName, int studentId, String school, String dept, String date, int nid, int phoneNumber) {
         this.fullName = fullName;
         this.studentId = studentId;
         this.school = school;
@@ -39,7 +39,7 @@ public class Student {
                 ", school='" + school + '\'' +
                 ", dept='" + dept + '\'' +
                 ", date='" + date + '\'' +
-                ", nid='" + nid + '\'' +
+                ", nid=" + nid +
                 ", phoneNumber=" + phoneNumber +
                 '}';
     }
@@ -92,11 +92,11 @@ public class Student {
         this.date = date;
     }
 
-    public String getNid() {
+    public int getNid() {
         return nid;
     }
 
-    public void setNid(String nid) {
+    public void setNid(int nid) {
         this.nid = nid;
     }
 
