@@ -89,7 +89,7 @@ public class ContactActivity extends AppCompatActivity {
             Student student;
 
             try {
-                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, Integer.parseInt(nid), Integer.parseInt(phoneNumber.getText().toString()));
+                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()));
                 MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
 
                 myDatabase.dao().studentInsertion(student);

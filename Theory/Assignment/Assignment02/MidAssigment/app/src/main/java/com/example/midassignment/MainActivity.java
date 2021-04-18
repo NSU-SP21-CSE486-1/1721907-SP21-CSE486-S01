@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity  {
     private Button nextButton;
     private EditText fullName, studentId, nid, date;
 
+    private ImageButton language;
+
 
     public static final String first_name = "com.example.midassignment.first_name";
     public static final String first_studentId = "com.example.midassignment.first_studentId";
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        loadLocale();
 
 
         nextButton = findViewById(R.id.next_button);
@@ -59,6 +62,10 @@ public class MainActivity extends AppCompatActivity  {
         studentId = findViewById(R.id.student_Id);
         nid = findViewById(R.id.nid_Id);
         date = findViewById(R.id.datePickerEditText);
+
+        language = findViewById(R.id.languageId);
+
+
 
 //        DropDown list start
 
@@ -146,4 +153,64 @@ public class MainActivity extends AppCompatActivity  {
         Intent intent = new Intent(this,DisplayActivity.class);
         startActivity(intent);
     }
+
+
+    //Multiple language Support Starts
+
+    public void change(View view) {
+
+        showChangeLanguageDialog();
+
+    }
+
+    private void showChangeLanguageDialog() {
+
+        final String[] listItem = {"English-UK", "English-US", "Bangla-BN"};
+        AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
+        mBuilder.setTitle("Choose Language...");
+        mBuilder.setSingleChoiceItems(listItem, -1, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+                if(i==0){
+                    setLocale("EN-UK");
+                    recreate();
+                }
+                else if(i==1){
+                    setLocale("EN-US");
+                    recreate();
+                }
+                else if(i==2){
+                    setLocale("BN");
+                    recreate();
+                }
+
+                dialogInterface.dismiss();
+
+            }
+        });
+
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.show();
+    }
+
+    private void setLocale(String language) {
+        Locale locale = new Locale(language);
+        Locale.setDefault(locale);
+        Configuration configuration = new Configuration();
+        configuration.locale = locale;
+        getBaseContext().getResources().updateConfiguration(configuration,getBaseContext().getResources().getDisplayMetrics());
+
+        SharedPreferences.Editor editor = getSharedPreferences("Settings", MODE_PRIVATE).edit();
+        editor.putString("My Language",language);
+        editor.apply();
+    }
+
+    public void loadLocale(){
+        SharedPreferences preferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        String languages = preferences.getString("My Language", "");
+        setLocale(languages);
+    }
+    //Multiple language Support Ends
+
 }
