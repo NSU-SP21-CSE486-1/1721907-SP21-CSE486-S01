@@ -68,8 +68,4 @@ public class SearchActivity extends AppCompatActivity {
         }));
 
     }
-
-    public void seacrh(View view) {
-
-    }
 }
