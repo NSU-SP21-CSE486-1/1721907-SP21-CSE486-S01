@@ -33,12 +33,11 @@ public class ContactActivity extends AppCompatActivity {
     private EditText permanentCountry,permanentDistrict,permanentPostOffice,permanentPoliceStation,permanentPostalCode, permanentHouse,permanentRoad;
 
 
-    RecyclerView recyclerView;
-    List<versions> versionsList1;
 
     ConstraintLayout expandableView1;
+    ConstraintLayout expandableView2;
     CardView cardView1;
-
+    CardView cardView2;
 
 
     @Override
@@ -47,11 +46,30 @@ public class ContactActivity extends AppCompatActivity {
         setContentView(R.layout.activity_contact);
 
 
-        saveButton = findViewById(R.id.save_button);
         phoneNumber = findViewById(R.id.phone_Id);
+        saveButton = findViewById(R.id.save_button);
 
-        initData();
-        setRecyclerView();
+        expandableView1 = findViewById(R.id.expandable1);
+        expandableView2 = findViewById(R.id.expandable2);
+        cardView1 = findViewById(R.id.Cardview1);
+        cardView2 = findViewById(R.id.Cardview2);
+
+        presentCountry = findViewById(R.id.presentCountry_Id);
+        presentDistrict = findViewById(R.id.presentDistrict_Id);
+        presentPostOffice = findViewById(R.id.presentPostOffice_Id);
+        presentPoliceStation = findViewById(R.id.presentPoliceStation_Id);
+        presentPostalCode = findViewById(R.id.presentPostalCode_Id);
+        presentHouse = findViewById(R.id.presentHouse_Id);
+        presentRoad = findViewById(R.id.presentRoad_Id);
+
+        permanentCountry = findViewById(R.id.permanentCountry_Id);
+        permanentDistrict = findViewById(R.id.permanentDistrict_Id);
+        permanentPostOffice = findViewById(R.id.permanentPostOffice_Id);
+        permanentPoliceStation = findViewById(R.id.permanentPoliceStation_Id);
+        permanentPostalCode = findViewById(R.id.permanentPostalCode_Id);
+        permanentHouse = findViewById(R.id.permanentHouse_Id);
+        permanentRoad = findViewById(R.id.permanentRoad_Id);
+
 
 
         Intent intent = getIntent();
@@ -66,48 +84,42 @@ public class ContactActivity extends AppCompatActivity {
 
     }
 
-    private void setRecyclerView() {
-        versionsAdapter1 versionsAdapter1 = new versionsAdapter1(versionsList1);
-        recyclerView.setAdapter(versionsAdapter1);
-        recyclerView.setHasFixedSize(true);
-
-    }
-
-    private void initData() {
-
-        versionsList1 = new ArrayList<>();
-
-
-        versionsList1.add(new versions(getString(R.string.present_address), "", "", "", "", "", "", ""));
-    }
-
 
     public void save(View view) {
 
         boolean allow = true;
         String pass_phoneNumber = phoneNumber.getText().toString();
 
-        if(phoneNumber.length() != 11){
-            phoneNumber.setError(getString(R.string.phone_number_validation));
-            allow = false;
-        }
+        String pass_presentCountry = presentCountry.getText().toString();
+        String pass_presentDistrict = presentDistrict.getText().toString();
+        String pass_presentPostOffice = presentPostOffice.getText().toString();
+        String pass_presentPoliceStation = presentPoliceStation.getText().toString();
+        String pass_presentPostalCode = presentPostalCode.getText().toString();
+        String pass_presentHouse = presentHouse.getText().toString();
+        String pass_presentRoad = presentRoad.getText().toString();
 
-        if (allow){
-            Student student;
-
-            try {
-                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()));
-                MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
-
-                myDatabase.dao().studentInsertion(student);
-
-                Intent intent = new Intent(ContactActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-            catch (Exception e){
-                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
-            }
-        }
+//        if(phoneNumber.length() != 11){
+//            phoneNumber.setError(getString(R.string.phone_number_validation));
+//            allow = false;
+//        }
+//
+//        if (allow){
+//            Student student;
+//
+//            try {
+//                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()));
+//                MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+//
+//                myDatabase.dao().studentInsertion(student);
+//
+//                Intent intent = new Intent(ContactActivity.this, MainActivity.class);
+//                startActivity(intent);
+//
+//            }
+//            catch (Exception e){
+                Toast.makeText(this, "There Is a Error", Toast.LENGTH_SHORT).show();
+//            }
+//        }
 
     }
 
@@ -120,6 +132,19 @@ public class ContactActivity extends AppCompatActivity {
         else {
             TransitionManager.beginDelayedTransition(cardView1, new AutoTransition());
             expandableView1.setVisibility(View.GONE);
+        }
+
+    }
+
+    public void expand2(View view) {
+
+        if (expandableView2.getVisibility()==View.GONE){
+            TransitionManager.beginDelayedTransition(cardView2, new AutoTransition());
+            expandableView2.setVisibility(View.VISIBLE);
+        }
+        else {
+            TransitionManager.beginDelayedTransition(cardView2, new AutoTransition());
+            expandableView2.setVisibility(View.GONE);
         }
 
     }
