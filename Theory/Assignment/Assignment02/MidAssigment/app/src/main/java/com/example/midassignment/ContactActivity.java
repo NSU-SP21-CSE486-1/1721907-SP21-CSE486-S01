@@ -88,38 +88,32 @@ public class ContactActivity extends AppCompatActivity {
     public void save(View view) {
 
         boolean allow = true;
-        String pass_phoneNumber = phoneNumber.getText().toString();
 
-        String pass_presentCountry = presentCountry.getText().toString();
-        String pass_presentDistrict = presentDistrict.getText().toString();
-        String pass_presentPostOffice = presentPostOffice.getText().toString();
-        String pass_presentPoliceStation = presentPoliceStation.getText().toString();
-        String pass_presentPostalCode = presentPostalCode.getText().toString();
-        String pass_presentHouse = presentHouse.getText().toString();
-        String pass_presentRoad = presentRoad.getText().toString();
+        if(phoneNumber.length() != 11){
+            phoneNumber.setError(getString(R.string.phone_number_validation));
+            allow = false;
+        }
 
-//        if(phoneNumber.length() != 11){
-//            phoneNumber.setError(getString(R.string.phone_number_validation));
-//            allow = false;
-//        }
-//
-//        if (allow){
-//            Student student;
-//
-//            try {
-//                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()));
-//                MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
-//
-//                myDatabase.dao().studentInsertion(student);
-//
-//                Intent intent = new Intent(ContactActivity.this, MainActivity.class);
-//                startActivity(intent);
-//
-//            }
-//            catch (Exception e){
+        if (allow){
+            Student student;
+
+            try {
+                student = new Student(fullName, Integer.parseInt(studentId), schoolList, deptList, date, nid, Integer.parseInt(phoneNumber.getText().toString()),presentCountry.getText().toString(),
+                        presentDistrict.getText().toString(),presentPostOffice.getText().toString(),presentPoliceStation.getText().toString(),presentPostalCode.getText().toString(),presentHouse.getText().toString(),presentRoad.getText().toString(),
+                        permanentCountry.getText().toString(),permanentDistrict.getText().toString(),permanentPostOffice.getText().toString(),permanentPoliceStation.getText().toString(),permanentPostalCode.getText().toString(),
+                        permanentHouse.getText().toString(),permanentRoad.getText().toString());
+                MyDatabase myDatabase = Room.databaseBuilder(ContactActivity.this, MyDatabase.class, "StudentDB").allowMainThreadQueries().build();
+
+                myDatabase.dao().studentInsertion(student);
+
+                Intent intent = new Intent(ContactActivity.this, MainActivity.class);
+                startActivity(intent);
+
+           }
+           catch (Exception e){
                 Toast.makeText(this, "There Is a Error", Toast.LENGTH_SHORT).show();
-//            }
-//        }
+           }
+       }
 
     }
 
