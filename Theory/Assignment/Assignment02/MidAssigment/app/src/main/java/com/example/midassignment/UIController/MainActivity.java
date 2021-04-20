@@ -1,4 +1,4 @@
-package com.example.midassignment;
+package com.example.midassignment.UIController;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.midassignment.viewmodel.DisplayActivity;
-import com.example.midassignment.viewmodel.SearchActivity;
+import com.example.midassignment.R;
 
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package com.example.midassignment.viewmodel;
+package com.example.midassignment.UIController;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -8,8 +8,9 @@ import androidx.room.Room;
 import android.os.Bundle;
 
 import com.example.midassignment.R;
-import com.example.midassignment.Room.MyDatabase;
-import com.example.midassignment.Room.Student;
+import com.example.midassignment.Room.Databases.MyDatabase;
+
+import com.example.midassignment.Room.Models.Student;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.midassignment.viewmodel;
+package com.example.midassignment.UIController;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -14,11 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.midassignment.R;
-import com.example.midassignment.Room.Student;
+import com.example.midassignment.Room.Models.Student;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayHolder> {
 

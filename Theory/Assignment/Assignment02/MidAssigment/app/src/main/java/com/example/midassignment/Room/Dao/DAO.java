@@ -1,8 +1,10 @@
-package com.example.midassignment.Room;
+package com.example.midassignment.Room.Dao;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
+
+import com.example.midassignment.Room.Models.Student;
 
 import java.util.List;
 

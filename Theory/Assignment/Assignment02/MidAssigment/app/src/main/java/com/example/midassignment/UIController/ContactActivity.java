@@ -1,9 +1,8 @@
-package com.example.midassignment;
+package com.example.midassignment.UIController;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import android.content.Intent;
@@ -15,11 +14,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.midassignment.Room.MyDatabase;
-import com.example.midassignment.Room.Student;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.example.midassignment.R;
+import com.example.midassignment.Room.Databases.MyDatabase;
+import com.example.midassignment.Room.Models.Student;
 
 public class ContactActivity extends AppCompatActivity {
 

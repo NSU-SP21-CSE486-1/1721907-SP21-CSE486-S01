@@ -1,1 +1,2 @@
-#Sample Readme.md to create folder structure
+Completed Code Milestone - 1 (Mid Assignment
+)
