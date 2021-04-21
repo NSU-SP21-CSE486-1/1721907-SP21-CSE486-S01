@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Fragments</string>
+
+    <string name="title1">Gone with the Wind</string>
+    <string name="article1">Gone with the Wind, American epic film, released in 1939, that was one of the best known and most successful films of all time. It enjoyed a more-than-30-year reign as the all-time Hollywood box office champion, and it won eight Academy Awards (in addition to two honorary awards). Based on the runaway best-selling 1936 novel Gone with the Wind by Margaret Mitchell, the movie is almost four hours long and includes an intermission.</string>
+    <string name="title2">To Kill a Mockingbird</string>
+    <string name="article2">To Kill a Mockingbird is a novel by the American author Harper Lee. It was published in 1960 and was instantly successful. In the United States, it is widely read in high schools and middle schools. To Kill a Mockingbird has become a classic of modern American literature, winning the Pulitzer Prize. The plot and characters are loosely based on Lees observations of her family, her neighbors and an event that occurred near her hometown of Monroeville, Alabama, in 1936, when she was ten.</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="yes_message">ARTICLE: Like</string>
+    <string name="no_message">ARTICLE: Thanks</string>
+    <string name="question_article">LIKE THE ARTICLE?</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="exception_message">must implement OnFragmentInteractionListener</string>
+    <string name="image">Image</string>
+    <string name="hello_blank_fragment">Hello World</string>
+    <string name="like_the_song">LIKE THE FILM?</string>
+    <string name="my_rating">My Rating:</string>
+</resources>
