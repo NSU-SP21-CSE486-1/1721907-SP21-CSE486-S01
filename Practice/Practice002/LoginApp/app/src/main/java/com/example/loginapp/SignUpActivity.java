@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -55,8 +56,8 @@ public class SignUpActivity extends AppCompatActivity {
                 userRegister();
                 break;
 
-            case R.id.dontAccountId:
-                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+            case R.id.alreadyAccountId:
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
 
                 break;
@@ -97,23 +98,26 @@ public class SignUpActivity extends AppCompatActivity {
             signupConfirmPassword.requestFocus();
             return;
         }
-        if(password.equals(confirmPassword)){
-            signupConfirmPassword.setError("Password Doesn't Match");
-            signupConfirmPassword.requestFocus();
-            return;
-        }
 
-        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
 
-                    Toast.makeText(getApplicationContext(), "Registration Is Successful", Toast.LENGTH_SHORT).show();
-                   
+                    {
+                        finish();
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                    }
                 } else {
+                    if(task.getException() instanceof FirebaseAuthUserCollisionException)
+                    {
+                        Toast.makeText(getApplicationContext(), "User Is Already Registered", Toast.LENGTH_SHORT).show();
+                    }else {
 
-                    Toast.makeText(getApplicationContext(), "Registration Is Not Successful", Toast.LENGTH_SHORT).show();
-                   
+                        Toast.makeText(getApplicationContext(), "Registration Is Not Successful" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });
