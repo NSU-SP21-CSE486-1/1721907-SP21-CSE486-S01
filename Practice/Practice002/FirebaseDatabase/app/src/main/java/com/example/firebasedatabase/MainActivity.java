@@ -2,6 +2,7 @@ package com.example.firebasedatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView info;
     private EditText name, age;
-    private Button submit;
+    private Button submit , view;
 
     DatabaseReference databaseReference;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         name = findViewById(R.id.nameId);
         age = findViewById(R.id.ageId);
         submit = findViewById(R.id.submitButtonId);
+        view =findViewById(R.id.viewButtonId);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("students");
     }
@@ -52,6 +54,16 @@ public class MainActivity extends AppCompatActivity {
     databaseReference.child(key).setValue(student);
 
         Toast.makeText(getApplicationContext(), "Student Info is added", Toast.LENGTH_SHORT).show();
+
+        name.setText("");
+        age.setText("");
+
+    }
+
+    public void view(View view) {
+
+        Intent intent = new Intent(MainActivity.this, DisplayActivity.class);
+        startActivity(intent);
 
     }
 }
