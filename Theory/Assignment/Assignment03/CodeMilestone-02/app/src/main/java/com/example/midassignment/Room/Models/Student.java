@@ -46,6 +46,9 @@ public class Student {
         this.permanentRoad = permanentRoad;
     }
 
+    public Student() {
+    }
+
     @Override
     public String toString() {
         return "Student{" +
