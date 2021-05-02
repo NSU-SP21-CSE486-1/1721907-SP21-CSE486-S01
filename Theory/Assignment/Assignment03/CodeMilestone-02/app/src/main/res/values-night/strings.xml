@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mid Assignment</string>
+    <string name="welcome">Welcome Brilliant</string>
+    <string name="fill_this_form">Please FIll Up This Form Quickly</string>
+    <string name="name">Your Name (According to NSU ID)</string>
+    <string name="id">Your Student ID</string>
+    <string name="birth">Your Date of Birth</string>
+    <string name="nid">Your NID</string>
+    <string name="school">Select Your School</string>
+    <string name="Department">Select Your Department</string>
+
+    <string name="next_button">Next</string>
+    <string name="view_button">View All</string>
+    <string name="save_button">Save</string>
+
+    <string name="contact">Contact Details</string>
+    <string name="search">Search Here</string>
+    <string name="phone">Your Phone Number</string>
+    <string name="drop_down">Drop Down</string>
+    <string name="country">Country</string>
+    <string name="district">District</string>
+    <string name="post_office">Post Office</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="police_station">Police Station</string>
+    <string name="house">House/Village/City</string>
+    <string name="road">Road/Block/Sector</string>
+    <string name="student_Id_Validation">You Should Put first 7 Digit of Your NSU Id</string>
+    <string name="nid_validation">\"You should Put Your New Format(10 Digit) NID Number \"</string>
+    <string name="phone_number_validation">You Should Put Your Number Within 11 Digit</string>
+    <string name="present_address">Present Address</string>
+    <string name="permanent_address">Permanent Address</string>
+    <string name="registerd_student_list">All The Registerd Student</string>
+    <string name="search_sttudent">Please Search Sttudent By Id</string>
+
+</resources>

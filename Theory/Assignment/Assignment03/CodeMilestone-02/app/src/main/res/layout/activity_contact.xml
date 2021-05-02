@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+   >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIController.ContactActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/contact"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/phone_Id"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/phone"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_box"
+            app:layout_constraintEnd_toEndOf="@+id/phone_Id"
+            app:layout_constraintStart_toStartOf="@+id/phone_Id"
+            app:layout_constraintTop_toBottomOf="@+id/phone_Id">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:onClick="expand1">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:padding="16dp"
+                    android:text="@string/present_address"
+                    android:backgroundTint="@color/light_white"
+                    android:drawableStart="@drawable/location"
+                    android:textSize="17sp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandable1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#F5F5F5"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1">
+
+                    <EditText
+                        android:id="@+id/presentCountry_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/country"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/presentDistrict_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/district"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentCountry_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/presentPostOffice_Id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/post_office"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentDistrict_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/presentPoliceStation_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/police_station"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentPostOffice_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/presentPostalCode_Id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/postal_code"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentPoliceStation_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/presentHouse_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/house"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentPostalCode_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/presentRoad_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/road"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/presentHouse_Id"
+                        tools:ignore="MissingConstraints" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Cardview2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_box"
+            app:layout_constraintEnd_toEndOf="@+id/Cardview1"
+            app:layout_constraintStart_toStartOf="@+id/Cardview1"
+            app:layout_constraintTop_toBottomOf="@+id/Cardview1">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:onClick="expand2">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:padding="16dp"
+                    android:text="@string/permanent_address"
+                    android:backgroundTint="@color/light_white"
+                    android:drawableStart="@drawable/location"
+                    android:textSize="17sp"
+                    android:drawablePadding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/expandable2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="#F5F5F5"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+                    <EditText
+                        android:id="@+id/permanentCountry_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/country"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/permanentDistrict_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/district"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentCountry_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/permanentPostOffice_Id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/post_office"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentDistrict_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/permanentPoliceStation_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/police_station"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentPostOffice_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/permanentPostalCode_Id"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/postal_code"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentPoliceStation_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/permanentHouse_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/house"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentPostalCode_Id"
+                        tools:ignore="MissingConstraints" />
+
+                    <EditText
+                        android:id="@+id/permanentRoad_Id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background"
+                        android:ems="10"
+                        android:hint="@string/road"
+                        android:inputType="textPersonName"
+                        android:backgroundTint="@color/light_white"
+                        android:padding="16dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/permanentHouse_Id"
+                        tools:ignore="MissingConstraints" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/button_box"
+            android:backgroundTint="@color/green"
+            android:onClick="save"
+            android:text="@string/save_button"
+            android:textColor="@color/light_white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/green"
+            app:layout_constraintEnd_toEndOf="@+id/Cardview2"
+            app:layout_constraintStart_toStartOf="@+id/Cardview2"
+            app:layout_constraintTop_toBottomOf="@+id/Cardview2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

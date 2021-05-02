@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UIController.MainActivity">
+
+
+  <TextView
+      android:id="@+id/welcome"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:text="@string/welcome"
+      android:textSize="20sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/full_name"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="52dp"
+      android:background="@drawable/input_box"
+      android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/name"
+      android:drawablePadding="10dp"
+      android:ems="10"
+      android:hint="@string/name"
+      android:inputType="textPersonName"
+      android:textColorHint="@color/gray"
+      app:layout_constraintEnd_toEndOf="@+id/fill_up_form"
+      app:layout_constraintHorizontal_bias="0.51"
+      app:layout_constraintStart_toStartOf="@+id/fill_up_form"
+      app:layout_constraintTop_toBottomOf="@+id/fill_up_form" />
+
+  <EditText
+      android:id="@+id/student_Id"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/input_box"
+      android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/id"
+      android:drawablePadding="10dp"
+      android:ems="10"
+      android:hint="@string/id"
+      android:inputType="number"
+      android:textColorHint="@color/gray"
+      app:layout_constraintEnd_toEndOf="@+id/full_name"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/full_name"
+      app:layout_constraintTop_toBottomOf="@+id/full_name" />
+
+  <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+      android:id="@+id/datePickerEditText"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/input_box"
+      android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/date"
+      android:drawablePadding="10dp"
+      android:hint="@string/birth"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+  <EditText
+      android:id="@+id/nid_Id"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/input_box"
+      android:backgroundTint="@color/light_white"
+      android:drawableStart="@drawable/id"
+      android:drawablePadding="10dp"
+      android:ems="10"
+      android:hint="@string/nid"
+      android:inputType="number"
+      android:textColorHint="@color/gray"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/datePickerEditText" />
+
+  <!--        School List Drop Down-->
+
+  <Button
+      android:id="@+id/next_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="40dp"
+      android:background="@drawable/button_box"
+      android:backgroundTint="@color/green"
+      android:onClick="next"
+      android:text="@string/next_button"
+      android:textColor="@color/light_white"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:backgroundTint="@color/green"
+      app:layout_constraintEnd_toEndOf="@+id/nid_Id"
+      app:layout_constraintStart_toStartOf="@+id/nid_Id"
+      app:layout_constraintTop_toBottomOf="@+id/nid_Id" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/TextInputLayout"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toEndOf="@+id/student_Id"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/student_Id"
+      app:layout_constraintTop_toBottomOf="@+id/student_Id"
+      app:startIconDrawable="@drawable/school">
+
+    <AutoCompleteTextView
+        android:id="@+id/School_list_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/light_white"
+        android:inputType="none"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/school"
+        android:textColor="@color/gray" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <!--        Department List Drop Down-->
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout2"
+      style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      app:layout_constraintEnd_toEndOf="@+id/TextInputLayout"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/TextInputLayout"
+      app:layout_constraintTop_toBottomOf="@+id/TextInputLayout"
+      app:startIconDrawable="@drawable/school">
+
+    <AutoCompleteTextView
+        android:id="@+id/dept_List_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/light_white"
+        android:inputType="none"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/Department"
+        android:textColor="@color/gray" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <TextView
+      android:id="@+id/fill_up_form"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:text="@string/fill_this_form"
+      app:layout_constraintEnd_toEndOf="@+id/welcome"
+      app:layout_constraintStart_toStartOf="@+id/welcome"
+      app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+  <Button
+      android:id="@+id/viewButton"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:onClick="view"
+      android:text="@string/view_button"
+      app:backgroundTint="@color/green"
+      android:textColor="@color/light_white"
+      app:layout_constraintEnd_toEndOf="@+id/next_button"
+      app:layout_constraintHorizontal_bias="0.495"
+      app:layout_constraintStart_toStartOf="@+id/next_button"
+      app:layout_constraintTop_toBottomOf="@+id/next_button" />
+
+  <ImageButton
+      android:id="@+id/languageId"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginStart="44dp"
+      android:layout_marginTop="16dp"
+      android:onClick="change"
+      android:src="@drawable/bangla_translate"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.281"
+      app:layout_constraintStart_toEndOf="@+id/welcome"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <ImageButton
+      android:id="@+id/imageButton"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:layout_marginTop="9dp"
+      android:onClick="search"
+      app:layout_constraintEnd_toEndOf="@+id/languageId"
+      app:layout_constraintStart_toStartOf="@+id/languageId"
+      app:layout_constraintTop_toBottomOf="@+id/languageId"
+      android:src ="@drawable/search" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

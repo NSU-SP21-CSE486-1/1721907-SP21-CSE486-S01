@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "909947519800",
+    "project_id": "codemilestone-02",
+    "storage_bucket": "codemilestone-02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909947519800:android:bdbe781c4f238bd146f7cd",
+        "android_client_info": {
+          "package_name": "com.example.midassignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "909947519800-he3ac0ak6ogfqilk9788fa3v997tjipp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDae32sthCXSltsa_BV04SOaahHR0oUenw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "909947519800-he3ac0ak6ogfqilk9788fa3v997tjipp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
