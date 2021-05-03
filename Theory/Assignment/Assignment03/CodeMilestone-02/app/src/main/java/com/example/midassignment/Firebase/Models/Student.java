@@ -1,4 +1,4 @@
-package com.example.midassignment.Room.Models;
+package com.example.midassignment.Firebase.Models;
 
 import android.location.Address;
 

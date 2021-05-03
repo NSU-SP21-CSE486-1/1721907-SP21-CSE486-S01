@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MidAssignment">
-        <activity android:name=".UIController.DisplayActivity"></activity>
+        <activity android:name=".UIController.SearchActivity"></activity>
+        <activity android:name=".UIController.DisplayActivity" />
         <activity android:name=".UIController.ContactActivity" />
         <activity android:name=".UIController.MainActivity">
             <intent-filter>

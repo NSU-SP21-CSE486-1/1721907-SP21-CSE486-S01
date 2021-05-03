@@ -3,7 +3,6 @@ package com.example.midassignment.UIController;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,8 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.midassignment.R;
-import com.example.midassignment.Room.Databases.MyDatabase;
-import com.example.midassignment.Room.Models.Student;
+import com.example.midassignment.Firebase.Models.Student;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -117,7 +115,7 @@ public class ContactActivity extends AppCompatActivity {
                 databaseReference.child(key).setValue(student);
 
                 Toast.makeText(getApplicationContext(), "Student Info is added", Toast.LENGTH_SHORT).show();
-                
+
 
                 Intent intent = new Intent(ContactActivity.this, MainActivity.class);
                 startActivity(intent);
