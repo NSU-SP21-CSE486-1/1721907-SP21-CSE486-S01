@@ -1,6 +1,9 @@
 package com.example.midassignment.UIController;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,6 +45,25 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayV
         Student student = searchData.get(position);
         holder.mStudentId.setText(String.valueOf(student.getStudentId()));
 
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.popup);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        holder.mStudentId.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView name = dialog.findViewById(R.id.nameid);
+                TextView deptName = dialog.findViewById(R.id.deptId) ;
+
+                name.setText(searchData.get(holder.getAdapterPosition()).getFullName());
+                deptName.setText(searchData.get(holder.getAdapterPosition()).getDept());
+
+                dialog.show();
+
+
+            }
+        });
+
     }
 
     @Override
@@ -59,7 +81,6 @@ public class DisplayAdapter extends RecyclerView.Adapter<DisplayAdapter.DisplayV
             mStudentId = itemView.findViewById(R.id.studentId);
         }
     }
-
 
 
     public Filter getFilter() {
