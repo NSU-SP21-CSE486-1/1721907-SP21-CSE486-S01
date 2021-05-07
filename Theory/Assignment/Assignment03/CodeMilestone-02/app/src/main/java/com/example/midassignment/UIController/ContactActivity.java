@@ -1,5 +1,6 @@
 package com.example.midassignment.UIController;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -8,13 +9,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.transition.AutoTransition;
 import android.transition.TransitionManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
 import com.example.midassignment.Firebase.Models.Student;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -37,11 +42,15 @@ public class ContactActivity extends AppCompatActivity {
     CardView cardView1;
     CardView cardView2;
 
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
+
+        this.setTitle("Registration App");
 
 
         phoneNumber = findViewById(R.id.phone_Id);
@@ -80,6 +89,8 @@ public class ContactActivity extends AppCompatActivity {
         deptList = intent.getStringExtra(MainActivity.first_deptList);
         date = intent.getStringExtra(MainActivity.first_date);
         nid = intent.getStringExtra(MainActivity.first_nid);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
 
@@ -153,5 +164,30 @@ public class ContactActivity extends AppCompatActivity {
         }
 
     }
+
+    //SignOut menu Starts
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_layout, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.signOutMenuId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    //SignOut menu Ends
 
 }

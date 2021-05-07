@@ -1,5 +1,6 @@
 package com.example.midassignment.UIController;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +10,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,7 +20,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
+import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Locale;
 
@@ -30,6 +35,8 @@ public class MainActivity extends AppCompatActivity  {
     private EditText fullName, studentId, nid, date;
 
     private ImageButton language;
+
+    private FirebaseAuth mAuth;
 
 
     public static final String first_name = "com.example.midassignment.first_name";
@@ -46,6 +53,8 @@ public class MainActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_main);
         loadLocale();
 
+        this.setTitle("Registration App");
+
 
         nextButton = findViewById(R.id.next_button);
         schoolList = findViewById(R.id.School_list_Id);
@@ -56,6 +65,9 @@ public class MainActivity extends AppCompatActivity  {
         date = findViewById(R.id.datePickerEditText);
 
         language = findViewById(R.id.languageId);
+
+        mAuth = FirebaseAuth.getInstance();
+
 
 
 
@@ -209,5 +221,32 @@ public class MainActivity extends AppCompatActivity  {
         setLocale(languages);
     }
     //Multiple language Support Ends
+
+
+
+    //SignOut menu Starts
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_layout, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.signOutMenuId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    //SignOut menu Ends
 
 }

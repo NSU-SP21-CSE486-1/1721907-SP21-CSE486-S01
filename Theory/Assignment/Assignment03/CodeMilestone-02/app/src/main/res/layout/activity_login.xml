@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="@string/welcome"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/fill_up_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/log_in_here"
+        app:layout_constraintEnd_toEndOf="@+id/welcome"
+        app:layout_constraintStart_toStartOf="@+id/welcome"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <EditText
+        android:id="@+id/loginEmailId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/name"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/fill_up_form"
+        app:layout_constraintStart_toStartOf="@+id/fill_up_form"
+        app:layout_constraintTop_toBottomOf="@+id/fill_up_form" />
+
+    <EditText
+        android:id="@+id/loginPasswordId"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/input_box"
+        android:backgroundTint="@color/light_white"
+        android:drawableStart="@drawable/password"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/loginEmailId"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/loginEmailId"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmailId" />
+
+    <Button
+        android:id="@+id/loginButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/button_box"
+        android:backgroundTint="@color/green"
+        android:onClick="login"
+        android:text="@string/login"
+        android:textColor="@color/light_white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/green"
+        app:layout_constraintEnd_toEndOf="@+id/loginPasswordId"
+        app:layout_constraintStart_toStartOf="@+id/loginPasswordId"
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordId" />
+
+    <TextView
+        android:id="@+id/dontAccountId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:onClick="login"
+        android:text="@string/don_t_have_any_account"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/loginButtonId"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/loginButtonId"
+        app:layout_constraintTop_toBottomOf="@+id/loginButtonId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

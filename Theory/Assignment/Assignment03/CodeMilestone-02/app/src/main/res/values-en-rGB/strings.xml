@@ -33,4 +33,15 @@
     <string name="phone_number_validation">You Should Put Your Number Within 11 Digit</string>
     <string name="registerd_student_list">All The Registerd Student</string>
     <string name="search_sttudent">Please Search Sttudent By Id</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="log_in_here">You Have To Log In Here</string>
+    <string name="email">Your Email</string>
+    <string name="password">Your Password</string>
+    <string name="don_t_have_any_account">Don\'t Have Any Account? Sign Up</string>
+    <string name="sign_up_here">You have To Sign Up Here</string>
+    <string name="sign_up_first">Sign Up First</string>
+    <string name="already_have_an_account">Already Have an Account? Sign In</string>
+    <string name="confirm_your_password">Confirm your Password</string>
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
 </resources>

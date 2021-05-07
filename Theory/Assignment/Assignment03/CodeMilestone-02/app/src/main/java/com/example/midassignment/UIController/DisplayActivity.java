@@ -5,11 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
+import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
 
 import com.example.midassignment.Firebase.Models.Student;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,10 +30,14 @@ public class DisplayActivity extends AppCompatActivity {
     DisplayAdapter dAdapter;
     ArrayList<Student> list;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display);
+
+        this.setTitle("Registration App");
 
         recyclerView = findViewById(R.id.recyclerviewId);
         databaseReference = FirebaseDatabase.getInstance().getReference("students");
@@ -38,6 +47,8 @@ public class DisplayActivity extends AppCompatActivity {
         list = new ArrayList<>();
         dAdapter = new DisplayAdapter(this, list);
         recyclerView.setAdapter(dAdapter);
+
+        mAuth = FirebaseAuth.getInstance();
 
 
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -60,5 +71,30 @@ public class DisplayActivity extends AppCompatActivity {
         });
 
     }
+
+    //SignOut menu Starts
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_layout, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.signOutMenuId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    //SignOut menu Ends
 
 }
