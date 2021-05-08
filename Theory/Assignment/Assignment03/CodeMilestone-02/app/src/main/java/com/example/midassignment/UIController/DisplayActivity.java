@@ -55,6 +55,7 @@ public class DisplayActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
+                list.clear();
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
 
                     Student student = dataSnapshot.getValue(Student.class);

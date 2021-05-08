@@ -84,7 +84,7 @@ public class SignupActivity extends AppCompatActivity {
             signUppassword.requestFocus();
             return;
         }
-        if (password.length() < 8) {
+        if (password.length() > 8) {
             signUppassword.setError("Password Should Be 8 Characters");
             signUppassword.requestFocus();
             return;
@@ -96,8 +96,18 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
+        if (confirmPassword.equals(password)) {
 
-      mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        }
+        else{
+            signupConfirmPassword.setError("Password Doesn't Match");
+            signupConfirmPassword.requestFocus();
+            return;
+        }
+
+
+
+        mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
         @Override
         public void onComplete (@NonNull Task< AuthResult > task) {
             if (task.isSuccessful()) {

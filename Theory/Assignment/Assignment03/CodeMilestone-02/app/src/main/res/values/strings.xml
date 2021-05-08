@@ -43,6 +43,7 @@
     <string name="confirm_your_password">Confirm your Password</string>
     <string name="signup">Signup</string>
     <string name="login">Login</string>
+    <string name="forget_password">Forgot Password?</string>
 
 
 </resources>

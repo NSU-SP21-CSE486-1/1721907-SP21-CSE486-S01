@@ -10,8 +10,7 @@ import java.util.List;
 @Entity
 public class Student {
 
-    @PrimaryKey(autoGenerate = true)
-    int serialId;
+
     String fullName;
     int studentId;
     String school;
@@ -52,7 +51,6 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" +
-                "serialId=" + serialId +
                 ", fullName='" + fullName + '\'' +
                 ", studentId=" + studentId +
                 ", school='" + school + '\'' +
@@ -75,14 +73,6 @@ public class Student {
                 ", permanentHouse='" + permanentHouse + '\'' +
                 ", permanentRoad='" + permanentRoad + '\'' +
                 '}';
-    }
-
-    public int getSerialId() {
-        return serialId;
-    }
-
-    public void setSerialId(int serialId) {
-        this.serialId = serialId;
     }
 
     public String getFullName() {
