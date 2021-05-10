@@ -1,9 +1,7 @@
-package com.example.midassignment;
+package com.example.midassignment.Session;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.example.midassignment.Firebase.Models.Student;
 
 public class Session {
 

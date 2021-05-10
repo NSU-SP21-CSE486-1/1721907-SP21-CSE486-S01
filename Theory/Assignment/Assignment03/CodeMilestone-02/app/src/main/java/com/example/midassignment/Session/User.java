@@ -1,4 +1,4 @@
-package com.example.midassignment;
+package com.example.midassignment.Session;
 
 public class User {
 

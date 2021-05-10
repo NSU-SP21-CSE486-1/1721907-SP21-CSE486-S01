@@ -20,9 +20,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
-import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
-import com.example.midassignment.Session;
+import com.example.midassignment.Session.Session;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Locale;

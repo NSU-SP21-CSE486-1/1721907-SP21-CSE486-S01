@@ -10,11 +10,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
 
 import com.example.midassignment.Firebase.Models.Student;
-import com.example.midassignment.Session;
+import com.example.midassignment.Session.Session;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

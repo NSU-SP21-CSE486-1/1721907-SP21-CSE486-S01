@@ -16,10 +16,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
 import com.example.midassignment.Firebase.Models.Student;
-import com.example.midassignment.Session;
+import com.example.midassignment.Session.Session;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
