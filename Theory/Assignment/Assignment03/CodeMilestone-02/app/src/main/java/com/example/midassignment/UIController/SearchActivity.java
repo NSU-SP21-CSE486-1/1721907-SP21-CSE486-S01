@@ -16,6 +16,7 @@ import android.widget.EditText;
 import com.example.midassignment.Firebase.Models.Student;
 import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
+import com.example.midassignment.Session;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -116,6 +117,8 @@ public class SearchActivity extends AppCompatActivity {
 
         if(item.getItemId() == R.id.signOutMenuId)
         {
+            Session session = new Session(SearchActivity.this);
+            session.sessionRemove();
             FirebaseAuth.getInstance().signOut();
             finish();
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);

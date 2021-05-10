@@ -41,7 +41,26 @@ public class LoginActivity extends AppCompatActivity {
         dontAccount = findViewById(R.id.dontAccountId);
     }
 
-        public void login(View view) {
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Session session = new Session(LoginActivity.this);
+        String email = session.getSession();
+
+        if (email != ""){
+
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+
+        }
+        else {
+
+        }
+
+    }
+
+    public void login(View view) {
 
             switch (view.getId()) {
 
@@ -89,6 +108,10 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(task.isSuccessful())
                 {
+                    User user = new User(email,password);
+                    Session session = new Session(LoginActivity.this);
+                    session.sessionSave(user);
+
                     finish();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -101,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 

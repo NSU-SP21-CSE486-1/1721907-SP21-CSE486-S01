@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.midassignment.LoginActivity;
 import com.example.midassignment.R;
 import com.example.midassignment.Firebase.Models.Student;
+import com.example.midassignment.Session;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -179,6 +180,9 @@ public class ContactActivity extends AppCompatActivity {
 
         if(item.getItemId() == R.id.signOutMenuId)
         {
+            Session session = new Session(ContactActivity.this);
+            session.sessionRemove();
+
             FirebaseAuth.getInstance().signOut();
             finish();
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
