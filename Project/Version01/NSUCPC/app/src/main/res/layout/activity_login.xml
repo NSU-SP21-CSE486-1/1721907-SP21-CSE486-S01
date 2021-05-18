@@ -4,15 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F4F4"
     tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/jobImageId"
+        android:layout_width="296dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="68dp"
+        android:src="@drawable/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/loginEmailId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/input_box"
-        android:backgroundTint="@color/light_white"
+        android:backgroundTint="#E4E1E1"
         android:drawableStart="@drawable/name"
         android:drawablePadding="10dp"
         android:ems="10"
@@ -20,9 +32,9 @@
         android:inputType="textPersonName"
         android:textColorHint="#546160"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/jobImageId" />
 
     <EditText
         android:id="@+id/loginPasswordId"
@@ -30,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:background="@drawable/input_box"
-        android:backgroundTint="@color/light_white"
+        android:backgroundTint="#E4E1E1"
         android:drawableStart="@drawable/password"
         android:drawablePadding="10dp"
         android:ems="10"
@@ -45,7 +57,7 @@
         android:id="@+id/loginButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_box"
         android:onClick="login"
         android:text="Login"
@@ -62,7 +74,7 @@
         android:id="@+id/dontAccountId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:onClick="login"
         android:text="Don't Have Any Account? Sign Up"
         android:textColor="#756F6F"
@@ -75,16 +87,15 @@
         android:id="@+id/forgetPasswordId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:onClick="login"
         android:text="Forgot Password?"
         android:textColor="#756F6F"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.847"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPasswordId" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
