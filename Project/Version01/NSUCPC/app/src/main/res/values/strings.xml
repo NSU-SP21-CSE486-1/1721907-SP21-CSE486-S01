@@ -67,4 +67,24 @@
     <string name="personal_email">Personal Email</string>
 
 
+    <!--    Speciality Details-->
+
+    <string name="your_speciality">Your Speciality</string>
+    <string name="skill_description">Skill Description</string>
+    <string name="extra_curricular_activities">Extra Curricular Activities</string>
+    <string name="personal_achievement">Personal Achievement</string>
+    <string name="add_skills">Add Skills</string>
+
+
+
+
+   <!--    Experiences Details-->
+
+    <string name="experiences">Experiences</string>
+    <string name="company_name">Company Name</string>
+<!--    <string name="department">Department</string>-->
+    <string name="designation">Designation</string>
+    <string name="years_of_experiences">Years of Experiences</string>
+
+
 </resources>
