@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SignUpActivity">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4">
 
     <TextView
-        android:id="@+id/personalDetailsId"
+        android:id="@+id/createNewAccountId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Create Your New Account"
+        android:text="@string/create_your_new_account"
         android:textColor="@color/button_background"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -28,14 +34,14 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Full Name"
+        android:hint="@string/full_name"
         android:inputType="textPersonName"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personalDetailsId" />
+        app:layout_constraintTop_toBottomOf="@+id/createNewAccountId" />
 
     <EditText
         android:id="@+id/signUpNsuIdId"
@@ -45,7 +51,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Nsu Id"
+        android:hint="@string/nsu_id"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -62,7 +68,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Nsu Email"
+        android:hint="@string/nsu_email"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -79,7 +85,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -96,7 +102,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Confirm Password"
+        android:hint="@string/confirm_password"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -113,7 +119,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Date of Birth"
+        android:hint="@string/date_of_birth"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -130,7 +136,7 @@
         android:background="@drawable/input_box"
         android:backgroundTint="#E4E1E1"
         android:ems="10"
-        android:hint="Nid"
+        android:hint="@string/nid"
         android:inputType="numberDecimal"
         android:paddingLeft="30dp"
         android:textColorHint="#546160"
@@ -146,7 +152,7 @@
         android:layout_marginTop="60dp"
         android:background="@drawable/button_box"
         android:onClick="signUp"
-        android:text="Sign In"
+        android:text="@string/sign_up"
         android:textColor="@color/light_white"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -162,7 +168,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:onClick="signUp"
-        android:text="Already Have an Account?  Sign In Now"
+        android:text="@string/already_have_an_account_sign_in_now"
         android:textColor="#756F6F"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -172,3 +178,4 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

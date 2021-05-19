@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4">
+
+
+        <TextView
+            android:id="@+id/personalDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/your_personal_details"
+            android:textColor="@color/button_background"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/personalNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalDetailsId" />
+
+        <EditText
+            android:id="@+id/personalFatherNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/father_name"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNameId" />
+
+        <EditText
+            android:id="@+id/personalMotherNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/mother_name"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalFatherNameId" />
+
+        <EditText
+            android:id="@+id/personalDateOfBirthId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/date_of_birth"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId" />
+
+        <EditText
+            android:id="@+id/personalNidId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/nid"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalDateOfBirthId" />
+
+        <EditText
+            android:id="@+id/personalReligionId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/religion"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNidId" />
+
+
+        <EditText
+            android:id="@+id/personalGenderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/gender"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalReligionId" />
+
+        <EditText
+            android:id="@+id/personalNationalityrId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/nationality"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalGenderId" />
+
+        <Button
+            android:id="@+id/signUpButtonId"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_box"
+            android:onClick="save"
+            android:text="@string/save"
+            android:textColor="@color/light_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#6DA396"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNationalityrId" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

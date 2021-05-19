@@ -2,4 +2,28 @@
 <resources>
     <string name="show_your_talent_grab_a_job">Show Your Talent Grab a Job</string>
     <string name="nsu_cpc">NSU CPC</string>
+    <string name="create_your_new_account">Create Your New Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="nsu_id">Nsu Id</string>
+    <string name="nsu_email">Nsu Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="nid">Nid</string>
+    <string name="sign_in">Sign In</string>
+    <string name="already_have_an_account_sign_in_now">Already Have an Account? Sign In Now</string>
+    <string name="nsu_email">Nsu Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="your_peronal_details">Your Peronal Details</string>
+    <string name="father_s_name">Father\'s Name</string>
+    <string name="mother_s_name">Mother\'s Name</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="nid">Nid</string>
+    <string name="religion">Religion</string>
+    <string name="gender">Gender</string>
+    <string name="nationality">Nationality</string>
+    <string name="save">Save</string>
+    <string name="don_t_have_any_account_sign_up">Don\'t Have Any Account? Sign Up</string>
 </resources>
