@@ -29,7 +29,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/nsu_email"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:textColorHint="#546160"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"

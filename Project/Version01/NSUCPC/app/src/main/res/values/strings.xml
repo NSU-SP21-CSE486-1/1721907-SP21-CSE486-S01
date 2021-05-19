@@ -45,8 +45,27 @@
     <string name="save">Save</string>
 
 
-    Academic Details
 
+<!--    Academic Details-->
+
+    <string name="your_academic_details">Your Academic Details</string>
+    <string name="institution_name">Institution Name</string>
+    <string name="degree_tittle">Degree Tittle</string>
+    <string name="department">Department</string>
+    <string name="major">Major</string>
+    <string name="cgpa">CGPA</string>
+    <string name="passing_year">Passing Year</string>
+    <string name="duraion">Duraion</string>
+
+
+<!--    Contact Details-->
+
+    <string name="your_contact_details">Your Contact Details</string>
+    <string name="parmanent_address">Parmanent Address</string>
+    <string name="present_address">Present Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="alternative_phone_number">Alternative Phone Number</string>
+    <string name="personal_email">Personal Email</string>
 
 
 </resources>
