@@ -77,22 +77,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalFatherNameId" />
 
-        <EditText
-            android:id="@+id/personalDateOfBirthId"
+
+        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+            android:id="@+id/personalDatePickerEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:background="@drawable/input_box"
             android:backgroundTint="#E4E1E1"
-            android:ems="10"
-            android:hint="@string/date_of_birth"
-            android:inputType="numberDecimal"
+            android:drawableEnd="@drawable/date"
             android:paddingLeft="30dp"
+            android:paddingRight="15dp"
             android:textColorHint="#546160"
+            android:hint="@string/date_of_birth"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId" />
+            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId"  />
+
 
         <EditText
             android:id="@+id/personalNidId"
@@ -109,7 +110,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personalDateOfBirthId" />
+            app:layout_constraintTop_toBottomOf="@+id/personalDatePickerEditText" />
 
         <EditText
             android:id="@+id/personalReligionId"

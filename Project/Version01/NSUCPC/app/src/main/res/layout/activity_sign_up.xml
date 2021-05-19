@@ -111,22 +111,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signUpPasswordId" />
 
-    <EditText
-        android:id="@+id/signUpDateOfBirthId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/input_box"
-        android:backgroundTint="#E4E1E1"
-        android:ems="10"
-        android:hint="@string/date_of_birth"
-        android:inputType="numberDecimal"
-        android:paddingLeft="30dp"
-        android:textColorHint="#546160"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpConfirmPasswordId" />
+        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+            android:id="@+id/signUpDatePickerEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:drawableEnd="@drawable/date"
+            android:paddingLeft="30dp"
+            android:paddingRight="15dp"
+            android:textColorHint="#546160"
+            android:hint="@string/date_of_birth"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpConfirmPasswordId"  />
 
     <EditText
         android:id="@+id/signUpNidId"
@@ -143,7 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signUpDateOfBirthId" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpDatePickerEditText" />
 
     <Button
         android:id="@+id/signUpButtonId"
