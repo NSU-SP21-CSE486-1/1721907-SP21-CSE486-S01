@@ -6,4 +6,5 @@
     <color name="skip_button_border">#BDBDBD</color>
     <color name="skip_button_background">#32292E</color>
     <color name="light_white">#F4F4F4</color>
+    <color name="light_black">#393737</color>
 </resources>

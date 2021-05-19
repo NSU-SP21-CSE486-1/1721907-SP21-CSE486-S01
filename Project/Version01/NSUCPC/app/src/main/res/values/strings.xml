@@ -45,8 +45,7 @@
     <string name="save">Save</string>
 
 
-
-<!--    Academic Details-->
+    <!--    Academic Details-->
 
     <string name="your_academic_details">Your Academic Details</string>
     <string name="institution_name">Institution Name</string>
@@ -58,7 +57,7 @@
     <string name="duraion">Duraion</string>
 
 
-<!--    Contact Details-->
+    <!--    Contact Details-->
 
     <string name="your_contact_details">Your Contact Details</string>
     <string name="parmanent_address">Parmanent Address</string>

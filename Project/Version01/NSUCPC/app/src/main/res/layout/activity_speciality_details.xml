@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SpecialityDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4">
+
+
+        <TextView
+            android:id="@+id/specialityDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:text="Your Speciality"
+            android:textColor="@color/button_background"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <Button
+            android:id="@+id/specialityAddSkillsId"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="56dp"
+            android:onClick="addSkills"
+            android:text="Add Skills"
+            android:drawableLeft="@drawable/add_skills"
+            android:paddingLeft="80dp"
+            android:paddingRight="70dp"
+            android:textColor="@color/light_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/button_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityDetailsId" />
+
+        <EditText
+            android:id="@+id/specialityskillDescriptionId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="Skill Description"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityAddSkillsId" />
+
+        <EditText
+            android:id="@+id/specialityExtraCurricularActivitiesId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="Extra Curricular Activities"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityskillDescriptionId" />
+
+        <EditText
+            android:id="@+id/specialityPersonalAchievementId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="Personal Achievement"
+            android:inputType="numberDecimal"
+            android:paddingLeft="30dp"
+            android:textColorHint="#546160"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityExtraCurricularActivitiesId" />
+
+
+        <Button
+            android:id="@+id/signUpButtonId"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/button_box"
+            android:onClick="save"
+            android:text="@string/save"
+            android:textColor="@color/light_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#6DA396"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/specialityPersonalAchievementId" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
