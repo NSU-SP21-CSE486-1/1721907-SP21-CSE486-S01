@@ -1,16 +1,14 @@
 <resources>
     <string name="app_name">NSU CPC</string>
 
-<!--    Splash Screen-->
+    <!--    Splash Screen-->
     <string name="show_your_talent_grab_a_job">Show Your Talent Grab a Job</string>
     <string name="skip">Skip</string>
     <string name="sign_up">Sign Up</string>
     <string name="nsu_cpc">NSU CPC</string>
 
 
-<!--    Login Screen-->
-
-
+    <!--    Login Screen-->
 
 
 </resources>
