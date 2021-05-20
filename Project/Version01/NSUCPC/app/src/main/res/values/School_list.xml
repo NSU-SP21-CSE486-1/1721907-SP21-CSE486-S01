@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="degree_list">
+
+        <item>Bachelor of Business Administration</item>
+        <item>Bachelor of Science </item>
+        <item>Bachelor of Arts </item>
+        <item>Bachelor of Architecture </item>
+        <item>Bachelor of Laws </item>
+        <item>Bachelor of Pharmacy </item>
+
+        <item>Master of Business Administration</item>
+        <item>Executive Master of Business Administration</item>
+        <item>Master of Science </item>
+        <item>Master of Arts </item>
+        <item>Master in Development Studies </item>
+        <item>Master of Laws </item>
+        <item>Master of Pharmacy </item>
+        <item>Master in Public Policy And Governance</item>
+        <item>Master in History And Asian Studies</item>
+        <item>Master in Public Health </item>
+        <item>Executive Master in Public Health </item>
+
+
+    </string-array>
+
+
+
+
+
+
     <string-array name="school_list">
 
         <item>School Of Engineering And Physical Sceince</item>

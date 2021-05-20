@@ -12,6 +12,7 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
     private AutoCompleteTextView schoolList;
     private AutoCompleteTextView deptList;
+    private AutoCompleteTextView degreeList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +22,7 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
         schoolList = findViewById(R.id.academicSchoolId);
         deptList = findViewById(R.id.academicDepartmentId);
+        degreeList = findViewById(R.id.academicDegreeTittleId);
 
 
 
@@ -31,15 +33,20 @@ public class AcademicDetailsActivity extends AppCompatActivity {
         String[] sbeListString = getResources().getStringArray(R.array.sbe_dept_list);
         String[] shssListString = getResources().getStringArray(R.array.shss_dept_list);
         String[] shlsListString = getResources().getStringArray(R.array.shls_dept_list);
+        String[] degreeListString = getResources().getStringArray(R.array.degree_list);
+
 
         ArrayAdapter schoolListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, schoolListString);
         ArrayAdapter ecelListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, eceListString);
         ArrayAdapter sbeListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sbeListString);
         ArrayAdapter shssListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, shssListString);
         ArrayAdapter shlsListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, shlsListString);
+        ArrayAdapter degreeListAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, degreeListString);
+
 
 
         schoolList.setAdapter(schoolListAdapter);
+        degreeList.setAdapter(degreeListAdapter);
         schoolList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

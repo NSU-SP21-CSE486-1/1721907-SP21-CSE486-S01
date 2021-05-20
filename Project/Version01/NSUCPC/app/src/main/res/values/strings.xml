@@ -49,9 +49,9 @@
 
     <string name="your_academic_details">Your Academic Details</string>
     <string name="institution_name">Institution Name</string>
-    <string name="degree_tittle">Degree Tittle</string>
-    <string name="department">Department</string>
-    <string name="school">School</string>
+    <string name="degree_tittle">Select Degree Tittle</string>
+    <string name="department">Select Department</string>
+    <string name="school">Select School</string>
     <string name="cgpa">CGPA</string>
     <string name="passing_year">Passing Year</string>
     <string name="duraion">Duraion</string>
@@ -90,7 +90,6 @@
 
     <!--    DropDown-->
     <string name="drop_down">Drop Down</string>
-
 
 
 
