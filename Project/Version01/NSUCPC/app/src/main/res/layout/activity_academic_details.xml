@@ -38,7 +38,7 @@
             android:hint="@string/institution_name"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="@color/hint_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
             android:hint="@string/degree_tittle"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="@color/hint_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,11 +63,12 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/academicSchoolId"
+            android:id="@+id/TextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="300dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:backgroundTint="#E4E1E1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,16 +76,16 @@
            >
 
             <AutoCompleteTextView
-                android:id="@+id/School_list_Id"
+                android:id="@+id/academicSchoolId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/light_white"
                 android:inputType="none"
+                android:paddingStart="30dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/school"
-                android:textColor="@color/gray" />
+                android:textColor="@color/hint_color" />
         </com.google.android.material.textfield.TextInputLayout>
 
 <!--        <EditText-->
@@ -106,28 +107,30 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/academicDepartmentId"
+            android:id="@+id/textInputLayout2"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="300dp"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:backgroundTint="#E4E1E1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academicSchoolId"
+            app:layout_constraintTop_toBottomOf="@+id/TextInputLayout"
             >
 
             <AutoCompleteTextView
-                android:id="@+id/dept_List_Id"
+                android:id="@+id/academicDepartmentId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/light_white"
+                android:backgroundTint="#E4E1E1"
                 android:inputType="none"
+                android:paddingStart="30dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/department"
-                android:textColor="@color/gray" />
+                android:textColor="@color/hint_color" />
         </com.google.android.material.textfield.TextInputLayout>
 
 <!--        <EditText-->
@@ -158,11 +161,11 @@
             android:hint="@string/cgpa"
             android:inputType="numberDecimal"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="@color/hint_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academicDepartmentId" />
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
         <EditText
             android:id="@+id/academicPassingYearId"
@@ -175,7 +178,7 @@
             android:hint="@string/passing_year"
             android:inputType="numberDecimal"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="@color/hint_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -193,7 +196,7 @@
             android:hint="@string/duraion"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="@color/hint_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"

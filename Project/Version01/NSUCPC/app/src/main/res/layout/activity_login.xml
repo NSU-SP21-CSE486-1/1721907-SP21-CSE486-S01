@@ -30,7 +30,7 @@
         android:ems="10"
         android:hint="@string/nsu_email"
         android:inputType="textEmailAddress"
-        android:textColorHint="#546160"
+        android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +48,7 @@
         android:ems="10"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:textColorHint="#546160"
+        android:textColorHint="@color/hint_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEmailId" />

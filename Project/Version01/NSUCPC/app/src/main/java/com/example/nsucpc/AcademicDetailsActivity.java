@@ -67,7 +67,7 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
     }
 
-    
+
 
     public void save(View view) {
     }

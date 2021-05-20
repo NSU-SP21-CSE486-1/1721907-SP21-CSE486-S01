@@ -34,7 +34,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     public void skip(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), PersonalDetailsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), AcademicDetailsActivity.class);
         startActivity(intent);
 
     }

@@ -137,11 +137,9 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/personalGenderTextInputLayout"
             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
-            android:layout_width="wrap_content"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/input_box"
-            android:backgroundTint="#E4E1E1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalReligionId">
@@ -153,10 +151,11 @@
                 android:layout_weight="1"
                 android:backgroundTint="#E4E1E1"
                 android:inputType="none"
+                android:paddingStart="30dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/gender"
-                android:textColor="@color/black" />
+                android:textColor="@color/hint_color" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
