@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "459758124135",
+    "project_id": "nsu-cpc-b2b08",
+    "storage_bucket": "nsu-cpc-b2b08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:459758124135:android:6831bffccdf21491fce8c2",
+        "android_client_info": {
+          "package_name": "com.example.nsucpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "459758124135-88eqo5s11qbqtmqfrtdpc0csp69fekcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnwsNyhv91LhkVJ8cWNwU8eUjGlPz17u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "459758124135-88eqo5s11qbqtmqfrtdpc0csp69fekcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

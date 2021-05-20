@@ -71,23 +71,6 @@
                 android:textColor="@color/hint_color" />
         </com.google.android.material.textfield.TextInputLayout>
 
-<!--        <EditText-->
-<!--            android:id="@+id/academicDegreeTittleId"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:background="@drawable/input_box"-->
-<!--            android:backgroundTint="#E4E1E1"-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/degree_tittle"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:paddingLeft="30dp"-->
-<!--            android:textColorHint="@color/hint_color"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.494"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/academicInstitutionNameId" />-->
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/TextInputLayout"
