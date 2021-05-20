@@ -61,39 +61,91 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/academicInstitutionNameId" />
 
-        <EditText
-            android:id="@+id/academicDepartmentId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/input_box"
-            android:backgroundTint="#E4E1E1"
-            android:ems="10"
-            android:hint="@string/department"
-            android:inputType="textPersonName"
-            android:paddingLeft="30dp"
-            android:textColorHint="#546160"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academicDegreeTittleId" />
 
-        <EditText
-            android:id="@+id/academicMajorId"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/academicSchoolId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/input_box"
-            android:backgroundTint="#E4E1E1"
-            android:ems="10"
-            android:hint="@string/major"
-            android:inputType="textPersonName"
-            android:paddingLeft="30dp"
-            android:textColorHint="#546160"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academicDepartmentId" />
+            app:layout_constraintTop_toBottomOf="@+id/academicDegreeTittleId"
+           >
+
+            <AutoCompleteTextView
+                android:id="@+id/School_list_Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/light_white"
+                android:inputType="none"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/school"
+                android:textColor="@color/gray" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <EditText-->
+<!--            android:id="@+id/academicSchoolId"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/input_box"-->
+<!--            android:backgroundTint="#E4E1E1"-->
+<!--            android:ems="10"-->
+<!--            android:hint="@string/school"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingLeft="30dp"-->
+<!--            android:textColorHint="#546160"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.505"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/academicDegreeTittleId" />-->
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/academicDepartmentId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/academicSchoolId"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/dept_List_Id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/light_white"
+                android:inputType="none"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/department"
+                android:textColor="@color/gray" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+<!--        <EditText-->
+<!--            android:id="@+id/academicDepartmentId"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/input_box"-->
+<!--            android:backgroundTint="#E4E1E1"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Department"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingLeft="30dp"-->
+<!--            android:textColorHint="#546160"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.505"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/academicSchoolId" />-->
 
         <EditText
             android:id="@+id/academicCgpaId"
@@ -110,7 +162,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/academicMajorId" />
+            app:layout_constraintTop_toBottomOf="@+id/academicDepartmentId" />
 
         <EditText
             android:id="@+id/academicPassingYearId"

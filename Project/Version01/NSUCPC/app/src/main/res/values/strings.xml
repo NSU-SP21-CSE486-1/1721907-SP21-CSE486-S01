@@ -40,7 +40,7 @@
     <!--    <string name="date_of_birth">Date of Birth</string>-->
     <!--    <string name="nid">Nid</string>-->
     <string name="religion">Religion</string>
-    <string name="gender">Gender</string>
+    <string name="gender">Select Gender</string>
     <string name="nationality">Nationality</string>
     <string name="save">Save</string>
 
@@ -51,7 +51,7 @@
     <string name="institution_name">Institution Name</string>
     <string name="degree_tittle">Degree Tittle</string>
     <string name="department">Department</string>
-    <string name="major">Major</string>
+    <string name="school">School</string>
     <string name="cgpa">CGPA</string>
     <string name="passing_year">Passing Year</string>
     <string name="duraion">Duraion</string>
@@ -85,6 +85,13 @@
 <!--    <string name="department">Department</string>-->
     <string name="designation">Designation</string>
     <string name="years_of_experiences">Years of Experiences</string>
+
+
+
+    <!--    DropDown-->
+    <string name="drop_down">Drop Down</string>
+
+
 
 
 </resources>

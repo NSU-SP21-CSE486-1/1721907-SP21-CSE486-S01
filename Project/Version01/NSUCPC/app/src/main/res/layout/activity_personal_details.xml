@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -37,7 +36,8 @@
             android:hint="@string/full_name"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColor="@color/black"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,8 +53,9 @@
             android:ems="10"
             android:hint="@string/father_name"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,8 +71,9 @@
             android:ems="10"
             android:hint="@string/mother_name"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -86,13 +88,14 @@
             android:background="@drawable/input_box"
             android:backgroundTint="#E4E1E1"
             android:drawableEnd="@drawable/date"
+            android:textColor="@color/black"
+            android:hint="@string/date_of_birth"
             android:paddingLeft="30dp"
             android:paddingRight="15dp"
-            android:textColorHint="#546160"
-            android:hint="@string/date_of_birth"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId"  />
+            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId" />
 
 
         <EditText
@@ -105,8 +108,9 @@
             android:ems="10"
             android:hint="@string/nid"
             android:inputType="numberDecimal"
+            android:textColor="@color/black"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -123,29 +127,38 @@
             android:hint="@string/religion"
             android:inputType="textPersonName"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="#949999"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/personalNidId" />
 
-
-        <EditText
-            android:id="@+id/personalGenderId"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/personalGenderTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/input_box"
             android:backgroundTint="#E4E1E1"
-            android:ems="10"
-            android:hint="@string/gender"
-            android:inputType="numberDecimal"
-            android:paddingLeft="30dp"
-            android:textColorHint="#546160"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personalReligionId" />
+            app:layout_constraintTop_toBottomOf="@+id/personalReligionId">
+
+            <AutoCompleteTextView
+                android:id="@+id/genderListId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E4E1E1"
+                android:inputType="none"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/gender"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <EditText
             android:id="@+id/personalNationalityrId"
@@ -157,12 +170,13 @@
             android:ems="10"
             android:hint="@string/nationality"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:paddingLeft="30dp"
-            android:textColorHint="#546160"
+            android:textColorHint="#949999"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/personalGenderId" />
+            app:layout_constraintTop_toBottomOf="@+id/personalGenderTextInputLayout" />
 
         <Button
             android:id="@+id/personalSaveButtonId"

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="school_list">
+
+        <item>School Of Engineering And Physical Sceince</item>
+        <item>School Of Business And Economics</item>
+        <item>School of Humanities And Social Sceince</item>
+        <item>School of Health And Life Science</item>
+
+    </string-array>
+
+    <string-array name="ece_dept_list">
+
+        <item>Architecture</item>
+        <item>Civil And Environmental</item>
+        <item>Electrical And Computer Engineering</item>
+        <item>Mathematics And Physics</item>
+
+    </string-array>
+
+    <string-array name="sbe_dept_list">
+
+        <item>Accounting And Finance</item>
+        <item>Economics</item>
+        <item>Management</item>
+        <item>Marketting And International Business</item>
+        <item>MBA And EMBA Programs</item>
+
+    </string-array>
+
+
+    <string-array name="shss_dept_list">
+
+        <item>English And Modern Language</item>
+        <item>Political Science And Sociology</item>
+        <item>Law</item>
+        <item>History And Philosophy</item>
+
+    </string-array>
+
+
+    <string-array name="shls_dept_list">
+
+        <item>BioChemistry And Microbiology</item>
+        <item>Environmental Science And Management</item>
+        <item>Pharmaceutical Science</item>
+        <item>Public Health</item>
+
+    </string-array>
+
+
+</resources>
