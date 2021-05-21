@@ -88,7 +88,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
-        if (nsuId.length() == 7) {
+        if (nsuId.length() != 7) {
             signUpNsuId.setError("Please Enter Your 7 Digit NSU Id");
             signUpNsuId.requestFocus();
             return;
@@ -145,7 +145,7 @@ public class SignUpActivity extends AppCompatActivity {
             return;
         }
 
-        if (nid.length() == 10) {
+        if (nid.length() != 10) {
             signUpNid.setError("Please Enter Your New Format (10 Digit) Nid Number");
             signUpNid.requestFocus();
             return;
