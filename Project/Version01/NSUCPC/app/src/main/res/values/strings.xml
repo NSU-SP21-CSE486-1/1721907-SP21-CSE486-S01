@@ -76,21 +76,17 @@
     <string name="add_skills">Add Skills</string>
 
 
-
-
-   <!--    Experiences Details-->
+    <!--    Experiences Details-->
 
     <string name="experiences">Experiences</string>
     <string name="company_name">Company Name</string>
-<!--    <string name="department">Department</string>-->
+    <!--    <string name="department">Department</string>-->
     <string name="designation">Designation</string>
     <string name="years_of_experiences">Years of Experiences</string>
 
 
-
     <!--    DropDown-->
     <string name="drop_down">Drop Down</string>
-
 
 
 </resources>
