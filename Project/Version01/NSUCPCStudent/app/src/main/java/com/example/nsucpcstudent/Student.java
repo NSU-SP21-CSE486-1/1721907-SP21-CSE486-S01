@@ -11,6 +11,14 @@ public class Student {
     String gender;
     String nationality;
 
+    String institutionName;
+    String degree;
+    String school;
+    String department;
+    String cgpa;
+    String passingYear;
+    String duration;
+
 
     public Student(String fullName, String fatherName, String motherName, String dateOfBirth, String nid, String religion, String gender, String nationality) {
         this.fullName = fullName;
@@ -23,19 +31,16 @@ public class Student {
         this.nationality = nationality;
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "fullName='" + fullName + '\'' +
-                ", fatherName='" + fatherName + '\'' +
-                ", motherName='" + motherName + '\'' +
-                ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", nid='" + nid + '\'' +
-                ", religion='" + religion + '\'' +
-                ", gender='" + gender + '\'' +
-                ", nationality='" + nationality + '\'' +
-                '}';
+    public Student(String institutionName, String degree, String school, String department, String cgpa, String passingYear, String duration) {
+        this.institutionName = institutionName;
+        this.degree = degree;
+        this.school = school;
+        this.department = department;
+        this.cgpa = cgpa;
+        this.passingYear = passingYear;
+        this.duration = duration;
     }
+
 
 
     public String getFullName() {
@@ -100,5 +105,61 @@ public class Student {
 
     public void setNationality(String nationality) {
         this.nationality = nationality;
+    }
+
+    public String getInstitutionName() {
+        return institutionName;
+    }
+
+    public void setInstitutionName(String institutionName) {
+        this.institutionName = institutionName;
+    }
+
+    public String getDegree() {
+        return degree;
+    }
+
+    public void setDegree(String degree) {
+        this.degree = degree;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public String getCgpa() {
+        return cgpa;
+    }
+
+    public void setCgpa(String cgpa) {
+        this.cgpa = cgpa;
+    }
+
+    public String getPassingYear() {
+        return passingYear;
+    }
+
+    public void setPassingYear(String passingYear) {
+        this.passingYear = passingYear;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 }

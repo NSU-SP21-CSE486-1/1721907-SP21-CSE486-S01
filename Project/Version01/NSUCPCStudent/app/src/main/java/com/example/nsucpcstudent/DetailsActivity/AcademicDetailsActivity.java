@@ -8,14 +8,17 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nsucpcstudent.R;
+import com.example.nsucpcstudent.Student;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AcademicDetailsActivity extends AppCompatActivity {
 
-    private String fullName, fatherName, motherName, dateOfBirth, nid, religion, gender, nationality;
     private EditText institutionName, cgpa, passingYear, duration;
     private Button saveButton;
 
@@ -24,14 +27,7 @@ public class AcademicDetailsActivity extends AppCompatActivity {
     private AutoCompleteTextView degreeList;
 
 
-    public static final String personInstitutionName = "com.example.nsucpc.personInstitutionName";
-    public static final String personDegreeTittle = "com.example.nsucpc.personDegreeTittle";
-    public static final String personSchool = "com.example.nsucpc.personSchool";
-    public static final String personDepartment = "com.example.nsucpc.personDepartment";
-    public static final String personCgpa= "com.example.nsucpc.personCgpa";
-    public static final String personPassingYear = "com.example.nsucpc.personPassingYear";
-    public static final String personDuration ="com.example.nsucpc.personDuration";
-
+    DatabaseReference databaseReference;
 
 
     @Override
@@ -43,10 +39,14 @@ public class AcademicDetailsActivity extends AppCompatActivity {
         cgpa = findViewById(R.id.academicCgpaId);
         passingYear = findViewById(R.id.academicPassingYearId);
         duration = findViewById(R.id.academicDurationId);
+        saveButton = findViewById(R.id.academicSaveButtonId);
 
         schoolList = findViewById(R.id.academicSchoolId);
         deptList = findViewById(R.id.academicDepartmentId);
         degreeList = findViewById(R.id.academicDegreeTittleId);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Academic Information");
+
 
 
 
@@ -102,36 +102,27 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
 
     public void save(View view) {
+            saveData();
+    }
 
-//Pass the Intents Starts
+    private void saveData() {
 
-        boolean allow = true;
-        String passInstitutionName = institutionName.getText().toString();
-        String passDegreeTittle = degreeList.getText().toString();
-        String passSchool = schoolList.getText().toString();
-        String passDepartment = deptList.getText().toString();
-        String passCgpa = cgpa.getText().toString();
-        String passPassingYear = passingYear.getText().toString();
-        String passDuration = duration.getText().toString();
+        Student student;
 
-        if (allow){
+        try {
+             String key = databaseReference.push().getKey();
 
-            Intent intent = new Intent(getApplicationContext(), ContactDetailsActivity.class);
+             student = new Student(institutionName.getText().toString(),degreeList.getText().toString(),schoolList.getText().toString(),deptList.getText().toString(),cgpa.getText().toString(),
+                     passingYear.getText().toString(),duration.getText().toString());
 
-            intent.putExtra(personInstitutionName,passInstitutionName);
-            intent.putExtra(personDegreeTittle,passDegreeTittle);
-            intent.putExtra(personSchool,passSchool);
-            intent.putExtra(personDepartment,passDepartment);
-            intent.putExtra(personCgpa,passCgpa);
-            intent.putExtra(personPassingYear,passPassingYear);
-            intent.putExtra(personDuration,passDuration);
+             databaseReference.child(key).setValue(student);
 
-            startActivity(intent);
+            Toast.makeText(getApplicationContext(), "Your Personal Info is added", Toast.LENGTH_SHORT).show();
 
         }
+        catch (Exception e){
 
-//Pass the Intents Ends
-
-
+            Toast.makeText(this, "There Is a Error", Toast.LENGTH_SHORT).show();
+        }
     }
 }

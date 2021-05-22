@@ -40,7 +40,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         saveButton = findViewById(R.id.personalSaveButtonId);
 
 
-        databaseReference = FirebaseDatabase.getInstance().getReference("students");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Personal Information");
 
 
 //DropDown list Start
@@ -78,7 +78,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
 
             databaseReference.child(key).setValue(student);
 
-            Toast.makeText(getApplicationContext(), "Student Info is added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Your Personal Info is added", Toast.LENGTH_SHORT).show();
         }
         catch (Exception e){
             Toast.makeText(this, "There Is a Error", Toast.LENGTH_SHORT).show();
