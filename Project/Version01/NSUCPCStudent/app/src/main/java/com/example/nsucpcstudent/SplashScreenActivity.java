@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nsucpcstudent.Authentication.LoginActivity;
+import com.example.nsucpcstudent.DetailsActivity.AcademicDetailsActivity;
 import com.example.nsucpcstudent.DetailsActivity.PersonalDetailsActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     public void skip(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), PersonalDetailsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), AcademicDetailsActivity.class);
         startActivity(intent);
 
     }
