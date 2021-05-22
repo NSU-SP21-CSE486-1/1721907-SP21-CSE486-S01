@@ -25,6 +25,16 @@ public class Student {
     String alternativePhone;
     String personalEmail;
 
+    String skillDescription;
+    String extraCurrucular;
+    String personalAchievment;
+
+
+    String companyName;
+    String companyDepartment;
+    String designation;
+    String yearsOfExperience;
+
 
     public Student(String fullName, String fatherName, String motherName, String dateOfBirth, String nid, String religion, String gender, String nationality) {
         this.fullName = fullName;
@@ -53,6 +63,22 @@ public class Student {
         this.phone = phone;
         this.alternativePhone = alternativePhone;
         this.personalEmail = personalEmail;
+    }
+
+    public Student(String skillDescription, String extraCurrucular, String personalAchievment) {
+        this.skillDescription = skillDescription;
+        this.extraCurrucular = extraCurrucular;
+        this.personalAchievment = personalAchievment;
+    }
+
+    public Student(String companyName, String companyDepartment, String designation, String yearsOfExperience) {
+        this.companyName = companyName;
+        this.companyDepartment = companyDepartment;
+        this.designation = designation;
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public Student() {
     }
 
     public String getFullName() {
@@ -214,5 +240,61 @@ public class Student {
 
     public void setPersonalEmail(String personalEmail) {
         this.personalEmail = personalEmail;
+    }
+
+    public String getSkillDescription() {
+        return skillDescription;
+    }
+
+    public void setSkillDescription(String skillDescription) {
+        this.skillDescription = skillDescription;
+    }
+
+    public String getExtraCurrucular() {
+        return extraCurrucular;
+    }
+
+    public void setExtraCurrucular(String extraCurrucular) {
+        this.extraCurrucular = extraCurrucular;
+    }
+
+    public String getPersonalAchievment() {
+        return personalAchievment;
+    }
+
+    public void setPersonalAchievment(String personalAchievment) {
+        this.personalAchievment = personalAchievment;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    public String getCompanyDepartment() {
+        return companyDepartment;
+    }
+
+    public void setCompanyDepartment(String companyDepartment) {
+        this.companyDepartment = companyDepartment;
+    }
+
+    public String getDesignation() {
+        return designation;
+    }
+
+    public void setDesignation(String designation) {
+        this.designation = designation;
+    }
+
+    public String getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(String yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
     }
 }

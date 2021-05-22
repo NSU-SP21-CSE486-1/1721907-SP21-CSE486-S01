@@ -35,7 +35,7 @@ public class ContactDetailsActivity extends AppCompatActivity {
         phone = findViewById(R.id.contactPhoneNumberId);
         alternativePhone = findViewById(R.id.contactAlternativePhoneNumberId);
         personalEmail = findViewById(R.id.contactPersonalEmailId);
-        saveButton = findViewById(R.id.academicSaveButtonId);
+        saveButton = findViewById(R.id.contactSaveButtonId);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Contact Information");
 
@@ -53,7 +53,7 @@ public class ContactDetailsActivity extends AppCompatActivity {
      String email = personalEmail.getText().toString();
 
         if(phone.length() != 11){
-            phone.setError("");
+            phone.setError("You Should Enter a Valid Phone Number");
             allow = false;
         }
 
