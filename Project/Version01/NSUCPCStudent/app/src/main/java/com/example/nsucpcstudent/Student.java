@@ -19,6 +19,12 @@ public class Student {
     String passingYear;
     String duration;
 
+    String parmanentAddress;
+    String presentAddress;
+    String phone;
+    String alternativePhone;
+    String personalEmail;
+
 
     public Student(String fullName, String fatherName, String motherName, String dateOfBirth, String nid, String religion, String gender, String nationality) {
         this.fullName = fullName;
@@ -41,7 +47,13 @@ public class Student {
         this.duration = duration;
     }
 
-
+    public Student(String parmanentAddress, String presentAddress, String phone, String alternativePhone, String personalEmail) {
+        this.parmanentAddress = parmanentAddress;
+        this.presentAddress = presentAddress;
+        this.phone = phone;
+        this.alternativePhone = alternativePhone;
+        this.personalEmail = personalEmail;
+    }
 
     public String getFullName() {
         return fullName;
@@ -161,5 +173,46 @@ public class Student {
 
     public void setDuration(String duration) {
         this.duration = duration;
+    }
+
+
+    public String getParmanentAddress() {
+        return parmanentAddress;
+    }
+
+    public void setParmanentAddress(String parmanentAddress) {
+        this.parmanentAddress = parmanentAddress;
+    }
+
+    public String getPresentAddress() {
+        return presentAddress;
+    }
+
+    public void setPresentAddress(String presentAddress) {
+        this.presentAddress = presentAddress;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getAlternativePhone() {
+        return alternativePhone;
+    }
+
+    public void setAlternativePhone(String alternativePhone) {
+        this.alternativePhone = alternativePhone;
+    }
+
+    public String getPersonalEmail() {
+        return personalEmail;
+    }
+
+    public void setPersonalEmail(String personalEmail) {
+        this.personalEmail = personalEmail;
     }
 }

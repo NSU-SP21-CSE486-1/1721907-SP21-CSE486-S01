@@ -67,6 +67,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
         allow = false;
 
     }
+
     if(allow){
         Student student;
 

@@ -49,7 +49,6 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
 
 
-
 //DropDown list start
 
         String[] schoolListString = getResources().getStringArray(R.array.school_list);
@@ -117,7 +116,7 @@ public class AcademicDetailsActivity extends AppCompatActivity {
 
              databaseReference.child(key).setValue(student);
 
-            Toast.makeText(getApplicationContext(), "Your Personal Info is added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Your Academic Info is added", Toast.LENGTH_SHORT).show();
 
         }
         catch (Exception e){
