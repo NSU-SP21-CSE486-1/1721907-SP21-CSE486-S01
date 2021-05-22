@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity.PersonalDetailsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F4F4">
+
+
+        <TextView
+            android:id="@+id/personalDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/your_personal_details"
+            android:textColor="@color/button_background"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/personalNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalDetailsId" />
+
+        <EditText
+            android:id="@+id/personalFatherNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/father_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:paddingLeft="30dp"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNameId" />
+
+        <EditText
+            android:id="@+id/personalMotherNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/mother_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:paddingLeft="30dp"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalFatherNameId" />
+
+
+        <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
+            android:id="@+id/personalDatePickerEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:drawableEnd="@drawable/date"
+            android:textColor="@color/black"
+            android:hint="@string/date_of_birth"
+            android:paddingLeft="30dp"
+            android:paddingRight="15dp"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalMotherNameId" />
+
+
+        <EditText
+            android:id="@+id/personalNidId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/nid"
+            android:inputType="numberDecimal"
+            android:textColor="@color/black"
+            android:paddingLeft="30dp"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalDatePickerEditText" />
+
+        <EditText
+            android:id="@+id/personalReligionId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/religion"
+            android:inputType="textPersonName"
+            android:paddingLeft="30dp"
+            android:textColorHint="#949999"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNidId" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/personalGenderTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalReligionId">
+
+            <AutoCompleteTextView
+                android:id="@+id/genderListId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#E4E1E1"
+                android:inputType="none"
+                android:paddingStart="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/gender"
+                android:textColor="@color/hint_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <EditText
+            android:id="@+id/personalNationalityId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_box"
+            android:backgroundTint="#E4E1E1"
+            android:ems="10"
+            android:hint="@string/nationality"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:paddingLeft="30dp"
+            android:textColorHint="#949999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalGenderTextInputLayout" />
+
+        <Button
+            android:id="@+id/personalSaveButtonId"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_box"
+            android:onClick="save"
+            android:text="@string/save"
+            android:textColor="@color/light_white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:backgroundTint="#6DA396"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.827"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalNationalityId" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

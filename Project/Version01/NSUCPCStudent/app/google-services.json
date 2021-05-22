@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "15000477219",
+    "project_id": "nsu-cpc-student",
+    "storage_bucket": "nsu-cpc-student.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15000477219:android:0d7ed7990a6b9062865b96",
+        "android_client_info": {
+          "package_name": "com.example.nsucpcstudent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15000477219-m3nm5n5aap2eiu5t7ea55b6alj37n9d9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMrPLwONoZ65oh2zI6Tz4MEB4iK1SqVmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15000477219-m3nm5n5aap2eiu5t7ea55b6alj37n9d9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
