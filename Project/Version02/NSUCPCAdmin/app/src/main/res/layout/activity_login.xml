@@ -54,11 +54,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginEmailId" />
 
+
     <Button
         android:id="@+id/loginButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="64dp"
         android:background="@drawable/button_box"
         android:onClick="login"
         android:text="@string/login"
@@ -70,19 +71,6 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgetPasswordId" />
-
-    <TextView
-        android:id="@+id/dontAccountId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="login"
-        android:text="@string/don_t_have_any_account"
-        android:textColor="#756F6F"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButtonId" />
 
     <TextView
         android:id="@+id/forgetPasswordId"

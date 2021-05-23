@@ -8,26 +8,12 @@
     tools:context=".WholeInformationActivity">
 
 
-    <ImageView
-        android:id="@+id/jobImageId"
-        android:layout_width="296dp"
-        android:layout_height="215dp"
-        android:layout_marginTop="32dp"
-
-
-        android:src="@drawable/wholeinfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.556"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personalInformationId" />
-
 
     <TextView
         android:id="@+id/hiAdminId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:onClick="personal"
         android:text="Hi Admin, "
         android:textSize="20sp"
         android:textStyle="bold"
@@ -37,11 +23,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/personalInformationId"
+        android:id="@+id/welcomeToThePortalId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:onClick="personal"
         android:text="Welcome To THe Portal "
         android:textSize="20sp"
         android:textStyle="bold"
@@ -49,111 +34,123 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hiAdminId" />
 
+
+    <ImageView
+        android:id="@+id/jobImageId"
+        android:layout_width="296dp"
+        android:layout_height="215dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/wholeinfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeToThePortalId" />
+
+
     <ImageButton
-        android:id="@+id/persionalDetailsButtonId"
+        android:id="@+id/addPostButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
+        android:onClick="add_job"
         android:layout_marginTop="32dp"
         android:src="@drawable/add_post"
-        app:layout_constraintEnd_toStartOf="@+id/experienceButtonId"
+        app:layout_constraintEnd_toStartOf="@+id/existingJobDetailsId"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/jobImageId" />
 
     <TextView
-        android:id="@+id/personalDetailsId"
+        android:id="@+id/addPostDetailsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:layout_marginTop="18dp"
         android:layout_marginEnd="53dp"
-        android:text="Personal Details"
+        android:text="Add Post"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/academicDetailsDetailsId"
+        app:layout_constraintEnd_toStartOf="@+id/existingJobDetailsId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/persionalDetailsButtonId" />
+        app:layout_constraintTop_toBottomOf="@+id/addPostButtonId" />
 
 
     <ImageButton
-        android:id="@+id/contactDetailsButtonId"
+        android:id="@+id/meetDeadlineButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="68dp"
-        android:onClick="contact"
+        android:onClick="meetApplicationDeadline"
         android:src="@drawable/meet_deadline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/specializationButtonId"
-        app:layout_constraintTop_toBottomOf="@+id/academicDetailsDetailsId" />
+        app:layout_constraintStart_toEndOf="@+id/deleteJobButtonId"
+        app:layout_constraintTop_toBottomOf="@+id/existingJobDetailsId" />
 
     <TextView
-        android:id="@+id/academicDetailsDetailsId"
+        android:id="@+id/existingJobDetailsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:text="Acadeemic Details"
+        android:text="Existing Job"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/personalDetailsId"
-        app:layout_constraintTop_toBottomOf="@+id/experienceButtonId" />
+        app:layout_constraintStart_toEndOf="@+id/addPostDetailsId"
+        app:layout_constraintTop_toBottomOf="@+id/existingJobButtonId" />
 
     <ImageButton
-        android:id="@+id/specializationButtonId"
+        android:id="@+id/deleteJobButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="124dp"
-        android:onClick="specialiazion"
+        android:onClick="deleteJob"
         android:src="@drawable/delete_job"
-        app:layout_constraintEnd_toStartOf="@+id/contactDetailsButtonId"
+        app:layout_constraintEnd_toStartOf="@+id/meetDeadlineButtonId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personalDetailsId" />
+        app:layout_constraintTop_toBottomOf="@+id/addPostDetailsId" />
 
     <TextView
-        android:id="@+id/specialiaztionId"
+        android:id="@+id/deleteJobDetailsId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
-        android:text="Specialization"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="86dp"
+        android:text="Delete Job"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/experienceId"
+        app:layout_constraintEnd_toStartOf="@+id/meetDeadlineDetailsId"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/specializationButtonId" />
+        app:layout_constraintTop_toBottomOf="@+id/deleteJobButtonId" />
 
     <ImageButton
-        android:id="@+id/experienceButtonId"
+        android:id="@+id/existingJobButtonId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:layout_marginStart="114dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="66dp"
-        android:onClick="experience"
+        android:onClick="existingJob"
         android:src="@drawable/experience"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/persionalDetailsButtonId"
+        app:layout_constraintStart_toEndOf="@+id/addPostButtonId"
         app:layout_constraintTop_toBottomOf="@+id/jobImageId" />
 
     <TextView
-        android:id="@+id/experienceId"
-        android:layout_width="wrap_content"
+        android:id="@+id/meetDeadlineDetailsId"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="51dp"
-        android:text="Experiences"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="16dp"
+        android:text="Meet Application Deadline"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/specialiaztionId"
-        app:layout_constraintTop_toBottomOf="@+id/contactDetailsButtonId" />
-
+        app:layout_constraintStart_toEndOf="@+id/deleteJobDetailsId"
+        app:layout_constraintTop_toBottomOf="@+id/meetDeadlineButtonId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

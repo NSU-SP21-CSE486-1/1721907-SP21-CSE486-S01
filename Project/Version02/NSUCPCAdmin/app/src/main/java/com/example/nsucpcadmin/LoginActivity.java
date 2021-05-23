@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
+
     private Button loginButton;
     private EditText loginEmail, loginPassword;
     private TextView dontAccount;
@@ -36,7 +37,6 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.loginButtonId);
         loginEmail = findViewById(R.id.loginEmailId);
         loginPassword = findViewById(R.id.loginPasswordId);
-        dontAccount = findViewById(R.id.dontAccountId);
 
     }
 
@@ -48,12 +48,8 @@ public class LoginActivity extends AppCompatActivity {
                 userLogin();
                 break;
 
-            case R.id.dontAccountId:
-                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
-                startActivity(intent);
-
-                break;
         }
+
     }
 
     private void userLogin() {
@@ -88,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 if (task.isSuccessful()) {
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), PersonalDetailsActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), WholeInformationActivity.class);
                     intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 } else {
@@ -100,5 +96,8 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+
+
 
 }
