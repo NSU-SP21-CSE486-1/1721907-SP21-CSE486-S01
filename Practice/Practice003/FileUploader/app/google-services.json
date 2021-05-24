@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "194167283835",
+    "project_id": "file-uploader-c7a2a",
+    "storage_bucket": "file-uploader-c7a2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194167283835:android:57eb525c555fdf4adf82de",
+        "android_client_info": {
+          "package_name": "com.example.fileuploader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194167283835-s4kipv9l3l40su15btmfrvp2auksd04t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB63nJqoZ8vsprX6xLEOzAGB69f2NYXNUk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194167283835-s4kipv9l3l40su15btmfrvp2auksd04t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
