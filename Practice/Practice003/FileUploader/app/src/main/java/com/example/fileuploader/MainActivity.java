@@ -29,11 +29,14 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button selecFile, upload;
+    Button selecFile, upload, view;
     TextView notification;
     Uri pdfUri;
+    ArrayList<String> urls = new ArrayList<>();
 
     FirebaseStorage firebaseStorage;
     FirebaseDatabase firebaseDatabase;
@@ -50,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         selecFile = findViewById(R.id.select_button);
         upload = findViewById(R.id.upload_button);
         notification = findViewById(R.id.fileName);
+        view = findViewById(R.id.viewAll_button);
 
         selecFile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +84,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, viewAllActivity.class));
+
+            }
+        });
+
     }
             private void uploadFile(Uri pdfUri) {
 
@@ -90,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
                 progressDialog.show();
 
                 final String fileName = System.currentTimeMillis() + "";
+                final String fileName1 = System.currentTimeMillis()+ "";
+
                 StorageReference storageReference = firebaseStorage.getReference();
 
 
@@ -111,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                                 DatabaseReference databaseReference = firebaseDatabase.getReference();
 
 
-                        databaseReference.child(fileName).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        databaseReference.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
 
@@ -183,4 +198,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+
 }
