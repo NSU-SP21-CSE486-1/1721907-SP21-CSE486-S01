@@ -1,5 +1,6 @@
 package com.example.nsucpcstudent.DetailsActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nsucpcstudent.DisplayActivity.PersonalDisplayActivity;
 import com.example.nsucpcstudent.R;
 import com.example.nsucpcstudent.Student;
 import com.google.firebase.database.DatabaseReference;
@@ -56,6 +58,7 @@ public class PersonalDetailsActivity extends AppCompatActivity {
     public void save(View view) {
         saveData();
 
+
     }
 
     private void saveData() {
@@ -80,6 +83,9 @@ public class PersonalDetailsActivity extends AppCompatActivity {
             databaseReference.child(key).setValue(student);
 
             Toast.makeText(getApplicationContext(), "Your Personal Info is added", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(getApplicationContext(), PersonalDisplayActivity.class);
+            startActivity(intent);
         }
         catch (Exception e){
             Toast.makeText(this, "There Is a Error", Toast.LENGTH_SHORT).show();

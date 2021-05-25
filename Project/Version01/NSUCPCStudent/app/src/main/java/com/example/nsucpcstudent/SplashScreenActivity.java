@@ -14,6 +14,8 @@ import com.example.nsucpcstudent.DetailsActivity.ContactDetailsActivity;
 import com.example.nsucpcstudent.DetailsActivity.ExperiencesDetailsActivity;
 import com.example.nsucpcstudent.DetailsActivity.PersonalDetailsActivity;
 import com.example.nsucpcstudent.DetailsActivity.SpecialityDetailsActivity;
+import com.example.nsucpcstudent.DisplayActivity.PersonalDisplayActivity;
+import com.example.nsucpcstudent.DisplayActivity.SeeJobsActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -41,7 +43,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     public void skip(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), ExperiencesDetailsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SeeJobsActivity.class);
         startActivity(intent);
 
     }

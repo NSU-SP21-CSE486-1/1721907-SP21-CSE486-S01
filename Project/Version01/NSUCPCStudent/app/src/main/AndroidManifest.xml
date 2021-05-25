@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPCStudent">
-
+        <activity android:name=".DisplayActivity.SeeJobsActivity" />
+        <activity android:name=".DisplayActivity.ContactDisplayActivity" />
+        <activity android:name=".DisplayActivity.AcademicDisplayActivity" />
+        <activity android:name=".DisplayActivity.PersonalDisplayActivity" />
+        <activity android:name=".DisplayActivity.SpecialityDisplayActivity" />
+        <activity android:name=".DisplayActivity.ExperienceDisplayActivity" />
         <activity android:name=".WholeInfoActivity" />
         <activity android:name=".DetailsActivity.ExperiencesDetailsActivity" />
         <activity android:name=".DetailsActivity.SpecialityDetailsActivity" />
@@ -25,7 +30,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

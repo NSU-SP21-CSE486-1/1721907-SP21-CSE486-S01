@@ -31,6 +31,8 @@ import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.util.ArrayList;
+
 public class AddJobActivity extends AppCompatActivity {
 
     private AutoCompleteTextView deptList;
@@ -39,6 +41,7 @@ public class AddJobActivity extends AppCompatActivity {
     Button selecFile, upload;
     TextView notification;
     Uri pdfUri;
+    ArrayList<String> urls = new ArrayList<>();
 
     FirebaseStorage firebaseStorage;
     FirebaseDatabase firebaseDatabase;
@@ -115,6 +118,9 @@ public class AddJobActivity extends AppCompatActivity {
         saveData();
 
         final String fileName = System.currentTimeMillis() + "";
+        final String fileName1 = System.currentTimeMillis()+ "";
+
+
         StorageReference storageReference = firebaseStorage.getReference();
 
 
@@ -136,7 +142,7 @@ public class AddJobActivity extends AppCompatActivity {
                                 DatabaseReference databaseReference = firebaseDatabase.getReference();
 
 
-                                databaseReference.child(fileName).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                databaseReference.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
 
@@ -173,8 +179,6 @@ public class AddJobActivity extends AppCompatActivity {
             }
         });
 
-        Intent intent = new Intent(getApplicationContext(), WholeInformationActivity.class);
-        startActivity(intent);
     }
 
 
