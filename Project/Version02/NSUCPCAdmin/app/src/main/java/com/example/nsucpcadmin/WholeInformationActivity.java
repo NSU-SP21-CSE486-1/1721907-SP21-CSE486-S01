@@ -26,6 +26,7 @@ public class WholeInformationActivity extends AppCompatActivity {
     public void add_job(View view) {
 
         Intent intent = new Intent(getApplicationContext(),AddJobActivity.class);
+        startActivity(intent);
 
     }
 }
