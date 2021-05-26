@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPCStudent">
+        <activity android:name=".Authentication.ForgetPasswordActivity"></activity>
         <activity android:name=".DisplayActivity.SeeJobsActivity" />
         <activity android:name=".DisplayActivity.ContactDisplayActivity" />
         <activity android:name=".DisplayActivity.AcademicDisplayActivity" />

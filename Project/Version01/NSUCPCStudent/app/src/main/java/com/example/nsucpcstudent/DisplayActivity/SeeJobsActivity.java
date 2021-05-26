@@ -27,7 +27,7 @@ public class SeeJobsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_see_jobs);
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Jobs pdf");
 
 
         databaseReference.addChildEventListener(new ChildEventListener() {

@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private Button loginButton;
     private EditText loginEmail, loginPassword;
-    private TextView dontAccount;
+    private TextView dontAccount,forgetPassword;
 
     private FirebaseAuth mAuth;
 
@@ -39,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.loginEmailId);
         loginPassword = findViewById(R.id.loginPasswordId);
         dontAccount = findViewById(R.id.dontAccountId);
+        forgetPassword = findViewById(R.id.forgetPasswordId);
 
     }
 
@@ -106,5 +107,11 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-    
+
+    public void forgetPassword(View view) {
+
+        Intent intent = new Intent(getApplicationContext(), ForgetPasswordActivity.class);
+        startActivity(intent);
+
+    }
 }

@@ -88,7 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="login"
+        android:onClick="forgetPassword"
         android:text="@string/forgot_password"
         android:textColor="#756F6F"
         android:textStyle="bold"
