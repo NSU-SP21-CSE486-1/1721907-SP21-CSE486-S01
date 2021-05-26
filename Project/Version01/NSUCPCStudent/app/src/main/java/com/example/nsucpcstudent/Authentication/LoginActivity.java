@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nsucpcstudent.DetailsActivity.PersonalDetailsActivity;
+import com.example.nsucpcstudent.DisplayActivity.PersonalDisplayActivity;
 import com.example.nsucpcstudent.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -92,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), PersonalDetailsActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), PersonalDisplayActivity.class);
                     intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }

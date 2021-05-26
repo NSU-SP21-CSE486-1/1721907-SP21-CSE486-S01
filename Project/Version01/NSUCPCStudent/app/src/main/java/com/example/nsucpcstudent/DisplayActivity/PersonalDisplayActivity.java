@@ -29,6 +29,7 @@ public class PersonalDisplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_personal_display);
 
         fullName = findViewById(R.id.personalDisplayNameId);
@@ -42,22 +43,25 @@ public class PersonalDisplayActivity extends AppCompatActivity {
 
     firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        databaseReference = firebaseDatabase.getReference("Personal Information");
 
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                Student student = snapshot.getValue(Student.class);
-                fullName.setText(student.getFullName());
-                fatherName.setText(student.getFatherName());
-                motherName.setText(student.getMotherName());
-                dateOfBirth.setText(student.getDateOfBirth());
-                nid.setText(student.getNid());
-                religion.setText(student.getReligion());
-                gender.setText(student.getGender());
-                nationality.setText(student.getNationality());
+                for(DataSnapshot dataSnapshot: snapshot.getChildren()) {
+                    Student student = snapshot.getValue(Student.class);
+                    fullName.setText(dataSnapshot.child("fullName").getValue(String.class));
+                    fatherName.setText(dataSnapshot.child("fatherName").getValue(String.class));
+                    motherName.setText(dataSnapshot.child("motherName").getValue(String.class));
+                    dateOfBirth.setText(dataSnapshot.child("dateOfBirth").getValue(String.class));
+                    nid.setText(dataSnapshot.child("nid").getValue(String.class));
+                    religion.setText(dataSnapshot.child("religion").getValue(String.class));
+                    gender.setText(dataSnapshot.child("gender").getValue(String.class));
+                    nationality.setText(dataSnapshot.child("nationality").getValue(String.class));
+
+                }
 
             }
 
