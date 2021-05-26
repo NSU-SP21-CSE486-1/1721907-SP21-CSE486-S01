@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nsucpcadmin.Authentication.LoginActivity;
+
 public class SplashScreenActivity extends AppCompatActivity {
 
     private Button signUp, skip;
@@ -29,10 +31,4 @@ public class SplashScreenActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void skip(View view) {
-
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(intent);
-
-    }
-}
+   }

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nsucpcstudent.Authentication.LoginActivity;
+import com.example.nsucpcstudent.DetailsActivity.SpecialityDetailsActivity;
 import com.example.nsucpcstudent.R;
 import com.example.nsucpcstudent.Model.Student;
 import com.google.firebase.auth.FirebaseAuth;
@@ -92,5 +93,9 @@ public class SpecialityDisplayActivity extends AppCompatActivity {
     }
 
     public void edit(View view) {
+
+        Intent intent = new Intent(getApplicationContext(), SpecialityDetailsActivity.class);
+        startActivity(intent);
+
     }
 }

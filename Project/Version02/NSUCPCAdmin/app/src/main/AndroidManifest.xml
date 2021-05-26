@@ -13,9 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPCAdmin">
         <activity android:name=".AddJobActivity"></activity>
-        <activity android:name=".ForgetPasswordActivity"></activity>
+        <activity android:name=".Authentication.ForgetPasswordActivity"></activity>
         <activity android:name=".WholeInformationActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Authentication.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

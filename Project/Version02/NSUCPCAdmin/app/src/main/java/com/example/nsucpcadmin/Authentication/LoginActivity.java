@@ -1,4 +1,4 @@
-package com.example.nsucpcadmin;
+package com.example.nsucpcadmin.Authentication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nsucpcadmin.R;
+import com.example.nsucpcadmin.WholeInformationActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;

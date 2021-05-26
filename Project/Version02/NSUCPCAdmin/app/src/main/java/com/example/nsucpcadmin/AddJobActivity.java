@@ -20,10 +20,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.nsucpcadmin.Model.Admin;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
@@ -37,6 +39,7 @@ public class AddJobActivity extends AppCompatActivity {
 
     private AutoCompleteTextView deptList;
     private EditText companyName;
+    private FirebaseAuth mAuth;
 
     Button selecFile, upload;
     TextView notification;
@@ -47,6 +50,7 @@ public class AddJobActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     ProgressDialog progressDialog;
     DatabaseReference databaseReference;
+
 
 
     @Override
@@ -66,6 +70,8 @@ public class AddJobActivity extends AppCompatActivity {
         notification = findViewById(R.id.fileName);
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Company Information");
+        mAuth = FirebaseAuth.getInstance();
+
 
 
         //DropDown list Start

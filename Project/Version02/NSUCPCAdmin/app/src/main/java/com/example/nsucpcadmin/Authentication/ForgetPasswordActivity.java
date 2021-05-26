@@ -1,4 +1,4 @@
-package com.example.nsucpcadmin;
+package com.example.nsucpcadmin.Authentication;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.nsucpcadmin.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -79,7 +80,7 @@ public class ForgetPasswordActivity extends AppCompatActivity {
                         if(task.isComplete()) {
                             Toast.makeText(ForgetPasswordActivity.this, "Please Check You Email", Toast.LENGTH_SHORT).show();
 
-                            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                             startActivity(intent);
                             finish();
                         }

@@ -1,4 +1,4 @@
-package com.example.nsucpcadmin;
+package com.example.nsucpcadmin.Model;
 
 public class Admin {
 
