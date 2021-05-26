@@ -45,7 +45,6 @@ public class AcademicDisplayActivity extends AppCompatActivity {
         databaseReference = firebaseDatabase.getReference("Academic Information");
 
 
-
           databaseReference.addValueEventListener(new ValueEventListener() {
               @Override
               public void onDataChange(@NonNull DataSnapshot snapshot) {
