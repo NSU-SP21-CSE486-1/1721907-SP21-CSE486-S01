@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nsucpcstudent.DetailsActivity.PersonalDetailsActivity;
 import com.example.nsucpcstudent.DisplayActivity.PersonalDisplayActivity;
+import com.example.nsucpcstudent.DisplayActivity.SeeJobsActivity;
 import com.example.nsucpcstudent.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -93,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 if(task.isSuccessful())
                 {
                     finish();
-                    Intent intent = new Intent(getApplicationContext(), PersonalDisplayActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), SeeJobsActivity.class);
                     intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }

@@ -12,88 +12,103 @@
         android:layout_height="match_parent"
         android:background="#F4F4F4">
 
-    <TextView
-        android:id="@+id/experienceDetailsDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:gravity="center"
-        android:text="Your Experience Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/button_background"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/experienceCompanyNameDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:drawableStart="@drawable/work2"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:drawablePadding="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/experienceDetailsDisplayId" />
+        <TextView
+            android:id="@+id/experienceDetailsDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:text="Your Experience Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/button_background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/experienceDepartmentDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/work"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:drawablePadding="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/experienceCompanyNameDisplayId" />
+        <ImageButton
+            android:id="@+id/experienceEditButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="186dp"
+            android:onClick="edit"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceDetailsDisplayId" />
 
-    <TextView
-        android:id="@+id/experienceDesignationDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/work"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:drawablePadding="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/experienceDepartmentDisplayId" />
+        <TextView
+            android:id="@+id/experienceCompanyNameDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:drawableStart="@drawable/work2"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceEditButtonId" />
 
+        <TextView
+            android:id="@+id/experienceDepartmentDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/work"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceCompanyNameDisplayId" />
 
-    <TextView
-        android:id="@+id/experienceYearsOfExperienceDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:drawableStart="@drawable/award"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:drawablePadding="20dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/experienceDesignationDisplayId" />
+        <TextView
+            android:id="@+id/experienceDesignationDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/work"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceDepartmentDisplayId" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/experienceYearsOfExperienceDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/award"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/experienceDesignationDisplayId" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

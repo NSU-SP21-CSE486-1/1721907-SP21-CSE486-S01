@@ -1,4 +1,4 @@
-package com.example.nsucpcstudent;
+package com.example.nsucpcstudent.Model;
 
 public class Student {
 

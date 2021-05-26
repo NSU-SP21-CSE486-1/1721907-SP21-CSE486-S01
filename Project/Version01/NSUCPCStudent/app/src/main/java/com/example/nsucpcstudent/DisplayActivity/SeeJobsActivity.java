@@ -6,10 +6,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
-import com.example.nsucpcstudent.JobAdapter;
+import com.example.nsucpcstudent.Adapter.JobAdapter;
+import com.example.nsucpcstudent.Authentication.LoginActivity;
+import com.example.nsucpcstudent.DetailsActivity.WholeInfoActivity;
 import com.example.nsucpcstudent.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,11 +27,15 @@ import java.util.ArrayList;
 public class SeeJobsActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    private FirebaseAuth mAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_see_jobs);
+
+        mAuth = FirebaseAuth.getInstance();
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Jobs pdf");
 
@@ -68,5 +78,32 @@ public class SeeJobsActivity extends AppCompatActivity {
         JobAdapter jobAdapter = new JobAdapter(recyclerView,SeeJobsActivity.this,new ArrayList<String>(),new ArrayList<String >());
         recyclerView.setAdapter(jobAdapter);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu2, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        if(item.getItemId() == R.id.signOutMenuId)
+        {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+        }
+
+        if(item.getItemId() == R.id.myProfileMenuId)
+        {
+            Intent intent = new Intent(getApplicationContext(), WholeInfoActivity.class);
+            startActivity(intent);
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

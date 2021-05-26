@@ -14,38 +14,50 @@
         android:background="#F4F4F4">
 
 
-    <TextView
-        android:id="@+id/contactDetailsDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
-        android:gravity="center"
-        android:text="Your Contact Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/button_background"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/contactDetailsDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="152dp"
+            android:gravity="center"
+            android:text="Your Contact Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/button_background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/contactParmanentAddressDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:drawableStart="@drawable/home"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:drawablePadding="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/contactDetailsDisplayId" />
+        <ImageButton
+            android:id="@+id/contactEditButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:onClick="edit"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactDetailsDisplayId" />
 
-    <TextView
+        <TextView
+            android:id="@+id/contactParmanentAddressDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:drawableStart="@drawable/home"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactEditButtonId" />
+
+        <TextView
         android:id="@+id/contactPresentAddressDisplayId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

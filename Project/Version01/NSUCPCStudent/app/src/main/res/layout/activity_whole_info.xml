@@ -4,9 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="1000dp"
+    android:layout_height="match_parent"
     android:background="#f4f4f4"
-    tools:context=".WholeInfoActivity">
+    tools:context=".DetailsActivity.WholeInfoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="Personal Information"
-        android:onClick="personal"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:onClick="personal"
         android:src="@drawable/personal_details"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"

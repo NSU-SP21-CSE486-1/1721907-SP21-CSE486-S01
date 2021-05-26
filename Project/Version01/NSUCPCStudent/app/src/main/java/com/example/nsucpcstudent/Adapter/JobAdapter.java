@@ -1,4 +1,4 @@
-package com.example.nsucpcstudent;
+package com.example.nsucpcstudent.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.nsucpcstudent.R;
 
 import java.util.ArrayList;
 

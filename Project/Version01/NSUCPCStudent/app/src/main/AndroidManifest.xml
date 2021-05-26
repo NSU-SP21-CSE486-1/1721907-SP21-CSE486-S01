@@ -16,7 +16,7 @@
         <activity android:name=".DisplayActivity.PersonalDisplayActivity" />
         <activity android:name=".DisplayActivity.SpecialityDisplayActivity" />
         <activity android:name=".DisplayActivity.ExperienceDisplayActivity" />
-        <activity android:name=".WholeInfoActivity" />
+        <activity android:name=".DetailsActivity.WholeInfoActivity" />
         <activity android:name=".DetailsActivity.ExperiencesDetailsActivity" />
         <activity android:name=".DetailsActivity.SpecialityDetailsActivity" />
         <activity android:name=".DetailsActivity.ContactDetailsActivity" />
@@ -24,7 +24,7 @@
         <activity android:name=".DetailsActivity.PersonalDetailsActivity" />
         <activity android:name=".Authentication.SignUpActivity" />
         <activity android:name=".Authentication.LoginActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".DetailsActivity.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

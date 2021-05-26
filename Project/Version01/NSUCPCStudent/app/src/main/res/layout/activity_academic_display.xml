@@ -14,38 +14,50 @@
         android:background="#F4F4F4">
 
 
-    <TextView
-        android:id="@+id/academicDisplayDetailsId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
-        android:gravity="center"
-        android:text="Your Academic Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/button_background"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/academicDisplayDetailsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:gravity="center"
+            android:text="Your Academic Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/button_background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/academicInstitutionNameDisplayId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
-        android:drawableStart="@drawable/instituttion"
-        android:drawableTint="#5E616C"
-        android:paddingLeft="30dp"
-        android:drawablePadding="20dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/academicDisplayDetailsId" />
+        <ImageButton
+            android:id="@+id/academicEditButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:onClick="edit"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/academicDisplayDetailsId" />
 
-    <TextView
+        <TextView
+            android:id="@+id/academicInstitutionNameDisplayId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:drawableStart="@drawable/instituttion"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/academicEditButtonId" />
+
+        <TextView
         android:id="@+id/academicDegreeTittleDisplayId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

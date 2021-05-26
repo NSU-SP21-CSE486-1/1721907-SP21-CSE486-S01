@@ -1,4 +1,4 @@
-package com.example.nsucpcstudent;
+package com.example.nsucpcstudent.DetailsActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,7 @@ import com.example.nsucpcstudent.DisplayActivity.ExperienceDisplayActivity;
 import com.example.nsucpcstudent.DisplayActivity.PersonalDisplayActivity;
 import com.example.nsucpcstudent.DisplayActivity.SeeJobsActivity;
 import com.example.nsucpcstudent.DisplayActivity.SpecialityDisplayActivity;
+import com.example.nsucpcstudent.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -47,7 +48,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
     public void skip(View view) {
 
-        Intent intent = new Intent(getApplicationContext(), SpecialityDisplayActivity.class);
+        Intent intent = new Intent(getApplicationContext(), SeeJobsActivity.class);
         startActivity(intent);
 
     }

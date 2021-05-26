@@ -14,37 +14,52 @@
         android:layout_height="match_parent"
         android:background="#F4F4F4">
 
-    <TextView
-        android:id="@+id/personalDisplayDetailsId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:gravity="center"
-        android:text="Your Personal Details"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/button_background"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/personalDisplayNameId"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:drawableStart="@drawable/name"
-        android:drawableTint="#5E616C"
-        android:drawablePadding="20dp"
-        android:paddingLeft="30dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personalDisplayDetailsId" />
+        <TextView
+            android:id="@+id/personalDisplayDetailsId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:text="Your Personal Details"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/button_background"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+        <ImageButton
+            android:id="@+id/persionalEditButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:onClick="edit"
+            android:src="@drawable/edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personalDisplayDetailsId" />
+
+
+        <TextView
+            android:id="@+id/personalDisplayNameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:drawableStart="@drawable/name"
+            android:drawablePadding="20dp"
+            android:drawableTint="#5E616C"
+            android:paddingLeft="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/persionalEditButtonId" />
+
+        <TextView
         android:id="@+id/personalDisplayFatherNameId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
