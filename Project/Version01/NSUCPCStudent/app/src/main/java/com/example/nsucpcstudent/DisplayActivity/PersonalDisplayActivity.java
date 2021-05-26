@@ -20,7 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 public class PersonalDisplayActivity extends AppCompatActivity {
 
     private TextView fullName,fatherName,motherName, dateOfBirth, nid, religion, gender,nationality;
-    private String email,password;
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;

@@ -4,6 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f4f4f4"
     tools:context=".DisplayActivity.AcademicDisplayActivity">
+
+
+    <TextView
+        android:id="@+id/academicDisplayDetailsId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="Your Academic Details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/button_background"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/academicInstitutionNameDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:drawableStart="@drawable/instituttion"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:drawablePadding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicDisplayDetailsId" />
+
+    <TextView
+        android:id="@+id/academicDegreeTittleDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/school"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawablePadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicInstitutionNameDisplayId" />
+
+    <TextView
+        android:id="@+id/academicSchoolDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/school"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:drawablePadding="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicDegreeTittleDisplayId" />
+
+
+    <TextView
+        android:id="@+id/academicDepartmentDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/school"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:drawablePadding="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicSchoolDisplayId" />
+
+    <TextView
+        android:id="@+id/academicCgpaDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/school"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:drawablePadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicDepartmentDisplayId" />
+
+    <TextView
+        android:id="@+id/academicPassingYearDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/date"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:drawablePadding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicCgpaDisplayId" />
+
+    <TextView
+        android:id="@+id/academicDurationDisplayId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableStart="@drawable/duration"
+        android:drawableTint="#5E616C"
+        android:paddingLeft="30dp"
+        android:drawablePadding="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/academicPassingYearDisplayId" />
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
