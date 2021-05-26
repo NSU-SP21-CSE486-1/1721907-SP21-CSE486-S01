@@ -139,7 +139,7 @@ public class AddJobActivity extends AppCompatActivity {
                             public void onSuccess(Uri uri) {
 
                                 String url = uri.toString();
-                                DatabaseReference databaseReference = firebaseDatabase.getReference();
+                                DatabaseReference databaseReference = firebaseDatabase.getReference("Jobs pdf");
 
 
                                 databaseReference.child(fileName1).setValue(url).addOnCompleteListener(new OnCompleteListener<Void>() {

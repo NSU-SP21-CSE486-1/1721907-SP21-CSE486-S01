@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NSUCPCAdmin">
         <activity android:name=".AddJobActivity"></activity>
+        <activity android:name=".ForgetPasswordActivity"></activity>
         <activity android:name=".WholeInformationActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
