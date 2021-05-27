@@ -1,8 +1,13 @@
-NSU CPC: Show Your Talent Grab A Job 
+                                                                NSU CPC: Show Your Talent Grab A Job 
+
 Ahnaf Ahmad
+
 Id:1721907042
+
 27th May,2021
+
 Department of Electrical & Computer Enginerring
+
 
 Introduction: 
 A job portal, also known as a career portal, is a center of information that allows job seekers to research and apply for positions with numerous registered companies. The goal of an online job portal is to create or construct an online search portal for job seekers. The system project is a web application that can be accessed from anywhere with the right login credentials. For job searchers, the system would serve as an Online Job Portal. Job seekers must be able to log in and upload their resumes (CV). Companies and organizations can also log in and access or search any of the information that job seekers have posted. 
@@ -17,6 +22,7 @@ Features:
 
 
 NSU CPC Student App: 
+
 Splash Screen:
 
 ![Splash Screen](https://user-images.githubusercontent.com/58990500/119759609-5c87b180-beca-11eb-9ecd-de0fc6c7bf2c.jpg)
@@ -146,6 +152,7 @@ Job PDF Download:
 
 
 NSU CPC Admin App: 
+
 Splash Screen: 
 
 ![Splash Screen](https://user-images.githubusercontent.com/58990500/119760618-23504100-becc-11eb-8df2-45bb50f25afb.jpg)
@@ -206,11 +213,15 @@ Job Description PDF uploading:
 
 
 
-Data Management: For the management of the data, Firebase Realtime database has been used which is a NoSQL database. For Login & Registration Authentication used Firebase Authentication. And here used Firebase Storage for Uploading PDF.  
+
+Data Management: For the management of the data, Firebase Realtime database has been used which is a NoSQL database. For Login & Registration Authentication used Firebase Authentication. And here used Firebase Storage for Uploading PDF.
+
 Here no local Database is used. But in future for the purpose of developing the app local database can be used.  
 
 
+
 Design Pattern: I tried to follow my Figma prototype design pattern. But the shortage of time I cannot follow that properly. Many of the features could not be implemented. But In future I will try to complete this application according to the Figma Prototype.
+
 
 
 Roadblocks: While working with this application, there were many roadblocks which slowed down the rate of work. It takes to many times to displaying the user data. First-time Firebase database did not connect properly & I could not disconnect them for the further give the connection. So, I had to redesign the app & create another Database. So, it takes too many times to redesign the application. It is not a common concept in this era. This is new for us. So, I must research more & more to implement the features & the number of resources were not enough. I struggled too much to find the proper resources for implement all the features. That is why the project was not completed. But in Future I will try to implement all the features of this app & try to launch it in google play store.  
