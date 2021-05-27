@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="dept_list">
+
+        <item>Architecture</item>
+        <item>Civil And Environmental</item>
+        <item>Electrical And Computer Engineering</item>
+        <item>Mathematics And Physics</item>
+
+        <item>Accounting And Finance</item>
+        <item>Economics</item>
+        <item>Management</item>
+        <item>Marketting And International Business</item>
+        <item>MBA And EMBA Programs</item>
+
+        <item>English And Modern Language</item>
+        <item>Political Science And Sociology</item>
+        <item>Law</item>
+        <item>History And Philosophy</item>
+
+        <item>BioChemistry And Microbiology</item>
+        <item>Environmental Science And Management</item>
+        <item>Pharmaceutical Science</item>
+        <item>Public Health</item>
+
+    </string-array>
+
+</resources>

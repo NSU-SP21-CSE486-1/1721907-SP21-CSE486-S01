@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NSU CPC Admin</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="don_t_have_any_account">DOn\'t Have Any Account</string>
+    <string name="login">Login</string>
+    <string name="password">Passowrd</string>
+    <string name="nsu_email">Nsu Email</string>
+
+    <string name="show_your_talent_grab_a_job">Show Your Talent Grab a Job</string>
+    <string name="skip">Skip</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="nsu_cpc">NSU CPC Admin</string>
+</resources>
