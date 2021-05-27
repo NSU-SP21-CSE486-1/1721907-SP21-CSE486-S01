@@ -48,7 +48,7 @@ public class PersonalDisplayActivity extends AppCompatActivity {
         gender = findViewById(R.id.personalDisplayGenderId);
         nationality = findViewById(R.id.personalDisplayNationalityId);
 
-    firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Personal Information");
         mAuth = FirebaseAuth.getInstance();

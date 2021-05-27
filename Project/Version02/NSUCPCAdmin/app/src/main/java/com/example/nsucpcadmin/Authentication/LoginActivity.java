@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.nsucpcadmin.R;
-import com.example.nsucpcadmin.WholeInformationActivity;
+import com.example.nsucpcadmin.UIController.WholeInformationActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
             loginEmail.requestFocus();
             return;
         }
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (!email.equals("nazmul.hasan@northsouth.edu")) {
             loginEmail.setError("Please Enter a Valid Email");
             loginEmail.requestFocus();
             return;

@@ -1,4 +1,4 @@
-package com.example.nsucpcadmin;
+package com.example.nsucpcadmin.UIController;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.nsucpcadmin.Authentication.LoginActivity;
+import com.example.nsucpcadmin.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
